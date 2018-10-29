@@ -6,27 +6,30 @@ interface Graph {
 	public Iterable<Integer> adj(int v);
 	public boolean hasEdge(int v, int w);
 }
+/**
+ * List of adjacencies.
+ */
 class AdjacencyList implements Graph {
 	/**
 	 * { number of vertices }.
 	 */
-	int nodes;
+	private int nodes;
 	/**
 	 * { number of edges }.
 	 */
-	int edges;
+	private int edges;
 	/**
 	 * { count of valid edges }.
 	 */
-	int count = 0;
+	private int count = 0;
 	/**
 	 * { bag array }.
 	 */
-	Bag<Integer>[] list;
+	private Bag<Integer>[] list;
 	/**
 	 * { keys }.
 	 */
-	String[] keys;
+	private String[] keys;
 	/**
 	 * Constructs the object.
 	 *
@@ -34,7 +37,7 @@ class AdjacencyList implements Graph {
 	 * @param      e     { number of edges }
 	 * @param      k     { keys }
 	 */
-	public AdjacencyList(final int n, final int e, final String[] k) {
+	AdjacencyList(final int n, final int e, final String[] k) {
 		nodes = n;
 		edges = e;
 		list = new Bag[n];
@@ -51,7 +54,7 @@ class AdjacencyList implements Graph {
 	public int V() {
 		return nodes;
 	}
-	/**
+	/**.
 	 * { edges }
 	 *
 	 * @return     { count of edges }
@@ -65,11 +68,10 @@ class AdjacencyList implements Graph {
 	 * @param      v1    The v 1
 	 * @param      v2    The v 2
 	 */
-	public void addEdge(int v1, int v2) {
-		if(hasEdge(v1, v2)) {
-			return;
+	public void addEdge(final int v1, final int v2) {
+		if (!hasEdge(v1, v2)) {
+			count++;
 		}
-		count++;
 		list[v1].add(v2);
 		list[v2].add(v1);
 	}
@@ -83,7 +85,7 @@ class AdjacencyList implements Graph {
 	 */
 	public boolean hasEdge(final int v1, final int v2) {
 		for (int k : adj(v1)) {
-			if(v2 == k) {
+			if (v2 == k) {
 				return true;
 			}
 		}
@@ -96,22 +98,23 @@ class AdjacencyList implements Graph {
 	 *
 	 * @return     { return adjecent vertices for given vertex }
 	 */
-	public Iterable<Integer> adj(int v) {
+	public Iterable<Integer> adj(final int v) {
 		return list[v];
 	}
 	/**
 	 * { print the graph }
 	 */
 	public void print() {
-		System.out.println(nodes + " vertices" + ", " + count + " edges");
-		if(count == 0) {
+		System.out.println(nodes + " vertices" +
+			", " + count + " edges");
+		if (count == 0) {
 			System.out.println("No edges");
 			return;
 		}
 		for (int i  = 0; i < nodes; i++) {
-			System.out.print(keys[i]+": ");
+			System.out.print(keys[i] + ": ");
 			for (int k : adj(i)) {
-				System.out.print(keys[k] +" ");
+				System.out.print(keys[k] + " ");
 			} System.out.println();
 		}
 	}
@@ -123,19 +126,25 @@ class AdjacencyMatrix implements Graph {
 	/**
 	 * { nodes }.
 	 */
-	int nodes;
-	/**
+	private int nodes;
+	/**.
 	 * { edges }
 	 */
-	int edges;
+	private int edges;
 	/**
 	 * { count of valid edges }.
 	 */
-	int count = 0;
-	/**
+	private int count = 0;
+	/**.
 	 * { matrix }
 	 */
 	int[][] matrix;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      n     { nodes }
+	 * @param      e     { edges }
+	 */
 	public AdjacencyMatrix(final int n, final int e) {
 		nodes = n;
 		edges = e;
@@ -188,14 +197,15 @@ class AdjacencyMatrix implements Graph {
 	 *
 	 * @return     True if has edge, False otherwise.
 	 */
-	public boolean hasEdge(int v1, int v2) {
+	public boolean hasEdge(final int v1, final int v2) {
 		return matrix[v1][v2] == 1;
 	}
-	/**
+	/**.
 	 * { print the graph }
 	 */
 	public void print() {
-		System.out.println(nodes + " vertices" + ", " + count + " edges");
+		System.out.println(nodes + " vertices" +
+			", " + count + " edges");
 		if (count == 0) {
 			System.out.println("No edges");
 			return;
@@ -219,7 +229,7 @@ final class Solution {
 	private Solution() {
 		//constructor
 	}
-	/**
+	/**.
 	 * { main function }
 	 *
 	 * @param      args  The arguments
@@ -232,7 +242,8 @@ final class Solution {
 		String[] keys = sc.nextLine().split(",");
 		switch (type) {
 		case "List":
-			AdjacencyList al = new AdjacencyList(nodes, edges, keys);
+			AdjacencyList al = new AdjacencyList(
+				nodes, edges, keys);
 			for (int i = 0; i < edges; i++) {
 				String[] values = sc.nextLine().split(" ");
 				if (!values[0].equals(values[1])) {
@@ -252,6 +263,8 @@ final class Solution {
 				}
 			}
 			am.print();
+			break;
+		default:
 			break;
 		}
 	}
