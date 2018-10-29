@@ -28,13 +28,20 @@ class AdjacencyList implements Graph {
 		return edges;
 	}
 	public void addEdge(int v1, int v2) {
+		if(hasEdge(v1, v2)) {
+			return;
+		}
 		count++;
 		list[v1].add(v2);
 		list[v2].add(v1);
 	}
 	public boolean hasEdge(int v1, int v2) {
+		for (int k : adj(v1)) {
+			if(v2 == k) {
+				return true;
+			}
+		}
 		return false;
-
 	}
 	public Iterable<Integer> adj(int v) {
 		return list[v];
@@ -109,10 +116,8 @@ class Solution {
 			AdjacencyList al = new AdjacencyList(nodes, edges, keys);
 			for (int i = 0; i < edges; i++) {
 				String[] values = sc.nextLine().split(" ");
-				int t1 = Integer.parseInt(values[0]);
-				int t2 = Integer.parseInt(values[1]);
-				if (t1 != t2) {
-					al.addEdge(t1, t2);
+				if (!values[0].equals(values[1])) {
+					al.addEdge(Integer.parseInt(values[0]), Integer.parseInt(values[1]));
 				}
 			}
 			al.print();
@@ -121,10 +126,8 @@ class Solution {
 			AdjacencyMatrix am = new AdjacencyMatrix(nodes, edges);
 			for (int i = 0; i < edges; i++) {
 				String[] values = sc.nextLine().split(" ");
-				int t1 = Integer.parseInt(values[0]);
-				int t2 = Integer.parseInt(values[1]);
-				if (t1 != t2) {
-					am.addEdge(t1, t2);
+				if (!values[0].equals(values[1])) {
+					am.addEdge(Integer.parseInt(values[0]), Integer.parseInt(values[1]));
 				}
 			}
 			am.print();
