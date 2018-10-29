@@ -1,16 +1,7 @@
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m1\1.1 Graph\Bag.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\msit\ADS2\6066_ADS2\m1\1.1 Graph\Bag.java:12:17: Name 'N' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
-[ERROR] D:\msit\ADS2\6066_ADS2\m1\1.1 Graph\Bag.java:57:32: Expected @param tag for 'item'. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m1\1.1 Graph\Bag.java:70: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\msit\ADS2\6066_ADS2\m1\1.1 Graph\Bag.java:80: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\msit\ADS2\6066_ADS2\m1\1.1 Graph\Bag.java:80:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m1\1.1 Graph\Bag.java:81: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\msit\ADS2\6066_ADS2\m1\1.1 Graph\Bag.java:83:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m1\1.1 Graph\Bag.java:84: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\msit\ADS2\6066_ADS2\m1\1.1 Graph\Bag.java:86:9: Missing a Javadoc comment. [JavadocMethod]
 Audit done.
-Checkstyle ends with 10 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m1\1.1 Graph\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\msit\ADS2\6066_ADS2\m1\1.1 Graph\Solution.java:2: Missing a Javadoc comment. [JavadocType]

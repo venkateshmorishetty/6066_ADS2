@@ -7,9 +7,9 @@ import java.util.NoSuchElementException;
  */
 public class Bag<Item> implements Iterable<Item> {
     /**
-     * { N }.
+     * { n }.
      */
-    private int N;
+    private int n;
     /**
      * { first }.
      */
@@ -32,7 +32,7 @@ public class Bag<Item> implements Iterable<Item> {
      */
     public Bag() {
         first = null;
-        N = 0;
+        n = 0;
     }
     /**
      * Determines if empty.
@@ -48,26 +48,27 @@ public class Bag<Item> implements Iterable<Item> {
      * @return     { size }
      */
     public int size() {
-        return N;
+        return n;
     }
-
-   /**
-     * Add the item to the bag.
-     */
+   /**.
+    * { add }
+    *
+    * @param      item  The item
+    */
     public void add(final Item item) {
         Node oldfirst = first;
         first = new Node();
         first.item = item;
         first.next = oldfirst;
-        N++;
+        n++;
     }
     /**.
      * { iterator }
      *
-     * @return     { list }
+     * @return    { list }
      */
     public Iterator<Item> iterator()  {
-        return new ListIterator();  
+        return new ListIterator();
     }
     /**.
      * Class for list iterator.
@@ -77,12 +78,25 @@ public class Bag<Item> implements Iterable<Item> {
          * { current node }.
          */
         private Node current = first;
-        public boolean hasNext()  { 
-            return current != null; 
+        /**
+         * Determines if it has next.
+         *
+         * @return     True if has next, False otherwise.
+         */
+        public boolean hasNext()  {
+            return current != null;
         }
+        /**.
+         * { remove }
+         */
         public void remove() {
-            throw new UnsupportedOperationException(); 
+            throw new UnsupportedOperationException();
         }
+        /**
+         * { next node }.
+         *
+         * @return     { return next address }
+         */
         public Item next() {
             if (!hasNext()) {
                 throw new NoSuchElementException();
