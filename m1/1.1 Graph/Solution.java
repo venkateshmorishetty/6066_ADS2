@@ -1,4 +1,7 @@
 import java.util.Scanner;
+/**
+ * Interface for graph.
+ */
 interface Graph {
     /**.
      * { vertices }
