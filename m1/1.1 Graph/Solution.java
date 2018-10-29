@@ -1,10 +1,10 @@
 import java.util.Scanner;
 interface Graph {
-	public int V();
-	public int E();
-	public void addEdge(int v, int w);
-	public Iterable<Integer> adj(int v);
-	public boolean hasEdge(int v, int w);
+	int vertices();
+	int edges();
+	void addEdge(int v, int w);
+	Iterable<Integer> adj(int v);
+	boolean hasEdge(int v, int w);
 }
 /**
  * List of adjacencies.
@@ -51,7 +51,7 @@ class AdjacencyList implements Graph {
 	 *
 	 * @return     { count of vertices }
 	 */
-	public int V() {
+	public int vertices() {
 		return nodes;
 	}
 	/**.
@@ -59,7 +59,7 @@ class AdjacencyList implements Graph {
 	 *
 	 * @return     { count of edges }
 	 */
-	public int E() {
+	public int edges() {
 		return edges;
 	}
 	/**
@@ -101,12 +101,12 @@ class AdjacencyList implements Graph {
 	public Iterable<Integer> adj(final int v) {
 		return list[v];
 	}
-	/**
+	/**.
 	 * { print the graph }
 	 */
 	public void print() {
-		System.out.println(nodes + " vertices" +
-			", " + count + " edges");
+		System.out.println(nodes + " vertices"
+			+ ", " + count + " edges");
 		if (count == 0) {
 			System.out.println("No edges");
 			return;
@@ -138,14 +138,14 @@ class AdjacencyMatrix implements Graph {
 	/**.
 	 * { matrix }
 	 */
-	int[][] matrix;
+	private int[][] matrix;
 	/**
 	 * Constructs the object.
 	 *
 	 * @param      n     { nodes }
 	 * @param      e     { edges }
 	 */
-	public AdjacencyMatrix(final int n, final int e) {
+	AdjacencyMatrix(final int n, final int e) {
 		nodes = n;
 		edges = e;
 		matrix = new int[nodes][nodes];
@@ -155,7 +155,7 @@ class AdjacencyMatrix implements Graph {
 	 *
 	 * @return     { count of vertices }
 	 */
-	public int V() {
+	public int vertices() {
 		return nodes;
 	}
 	/**
@@ -163,7 +163,7 @@ class AdjacencyMatrix implements Graph {
 	 *
 	 * @return     { count of edges }
 	 */
-	public int E() {
+	public int edges() {
 		return edges;
 	}
 	/**
@@ -204,8 +204,8 @@ class AdjacencyMatrix implements Graph {
 	 * { print the graph }
 	 */
 	public void print() {
-		System.out.println(nodes + " vertices" +
-			", " + count + " edges");
+		System.out.println(nodes + " vertices"
+			+ ", " + count + " edges");
 		if (count == 0) {
 			System.out.println("No edges");
 			return;
