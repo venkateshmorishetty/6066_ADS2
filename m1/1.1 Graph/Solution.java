@@ -1,9 +1,40 @@
 import java.util.Scanner;
 interface Graph {
+	/**
+	 * { vertices }
+	 *
+	 * @return     { number of edges }
+	 */
 	int vertices();
+	/**
+	 * { edges }
+	 *
+	 * @return     { number of edges }
+	 */
 	int edges();
+	/**
+	 * Adds an edge.
+	 *
+	 * @param      v     { vertex v }
+	 * @param      w     { vertex w }
+	 */
 	void addEdge(int v, int w);
+	/**
+	 * { adj function }
+	 *
+	 * @param      v     { vertex v }
+	 *
+	 * @return     {vertices adjecent to v} }
+	 */
 	Iterable<Integer> adj(int v);
+	/**
+	 * Determines if it has edge.
+	 *
+	 * @param      v     { vertex v }
+	 * @param      w     { vertex e }
+	 *
+	 * @return     True if has edge, False otherwise.
+	 */
 	boolean hasEdge(int v, int w);
 }
 /**
