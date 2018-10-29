@@ -98,7 +98,7 @@ class AdjacencyList implements Graph {
     }
     /**
      * Adds an edge.
-     *
+     * {time complexity for addEdge is O(n)}.
      * @param      v1    The v 1
      * @param      v2    The v 2
      */
@@ -127,7 +127,7 @@ class AdjacencyList implements Graph {
     }
     /**
      * { adjecents connected to vertex }.
-     *
+     * {time complexity is O(1)}
      * @param      v     { vertex }
      *
      * @return     { return adjecent vertices for given vertex }
@@ -137,6 +137,7 @@ class AdjacencyList implements Graph {
     }
     /**.
      * { print the graph }
+     * {time complexity for print is O(n^2)}
      */
     public void print() {
         System.out.println(nodes + " vertices"
@@ -202,7 +203,7 @@ class AdjacencyMatrix implements Graph {
     }
     /**
      * { adjecent vertices for given vertex }.
-     *
+     * {time complexity for O(1)}
      * @param      v     { vertex }
      *
      * @return     { adjecent vertices for given vertex }
@@ -212,7 +213,7 @@ class AdjacencyMatrix implements Graph {
     }
     /**
      * Adds an edge.
-     *
+     * {time complexity for addEdge is O(1)}
      * @param      v1    The v 1
      * @param      v2    The v 2
      */
@@ -225,7 +226,7 @@ class AdjacencyMatrix implements Graph {
     }
     /**
      * Determines if it has edge.
-     *
+     * {time comlplexity for hasEdge is O(1)}
      * @param      v1    The v 1
      * @param      v2    The v 2
      *
@@ -236,6 +237,7 @@ class AdjacencyMatrix implements Graph {
     }
     /**.
      * { print the graph }
+     * { time complexity for print is O(n^2) }
      */
     public void print() {
         System.out.println(nodes + " vertices"
