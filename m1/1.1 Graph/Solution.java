@@ -7,12 +7,34 @@ interface Graph {
 	public boolean hasEdge(int v, int w);
 }
 class AdjacencyList implements Graph {
+	/**
+	 * { number of vertices }.
+	 */
 	int nodes;
+	/**
+	 * { number of edges }.
+	 */
 	int edges;
+	/**
+	 * { count of valid edges }.
+	 */
 	int count = 0;
+	/**
+	 * { bag array }.
+	 */
 	Bag<Integer>[] list;
+	/**
+	 * { keys }.
+	 */
 	String[] keys;
-	public AdjacencyList(int n, int e, String[] k) {
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      n     { number of vertices }
+	 * @param      e     { number of edges }
+	 * @param      k     { keys }
+	 */
+	public AdjacencyList(final int n, final int e, final String[] k) {
 		nodes = n;
 		edges = e;
 		list = new Bag[n];
@@ -21,12 +43,28 @@ class AdjacencyList implements Graph {
 		}
 		keys = k;
 	}
+	/**
+	 * { total vertices }.
+	 *
+	 * @return     { count of vertices }
+	 */
 	public int V() {
 		return nodes;
 	}
+	/**
+	 * { edges }
+	 *
+	 * @return     { count of edges }
+	 */
 	public int E() {
 		return edges;
 	}
+	/**
+	 * Adds an edge.
+	 *
+	 * @param      v1    The v 1
+	 * @param      v2    The v 2
+	 */
 	public void addEdge(int v1, int v2) {
 		if(hasEdge(v1, v2)) {
 			return;
@@ -35,7 +73,15 @@ class AdjacencyList implements Graph {
 		list[v1].add(v2);
 		list[v2].add(v1);
 	}
-	public boolean hasEdge(int v1, int v2) {
+	/**
+	 * Determines if it has edge.
+	 *
+	 * @param      v1    The v 1
+	 * @param      v2    The v 2
+	 *
+	 * @return     True if has edge, False otherwise.
+	 */
+	public boolean hasEdge(final int v1, final int v2) {
 		for (int k : adj(v1)) {
 			if(v2 == k) {
 				return true;
@@ -43,9 +89,19 @@ class AdjacencyList implements Graph {
 		}
 		return false;
 	}
+	/**
+	 * { adjecents connected to vertex }.
+	 *
+	 * @param      v     { vertex }
+	 *
+	 * @return     { return adjecent vertices for given vertex }
+	 */
 	public Iterable<Integer> adj(int v) {
 		return list[v];
 	}
+	/**
+	 * { print the graph }
+	 */
 	public void print() {
 		System.out.println(nodes + " vertices" + ", " + count + " edges");
 		if(count == 0) {
@@ -60,35 +116,84 @@ class AdjacencyList implements Graph {
 		}
 	}
 }
+/**
+ * Class for adjacency matrix.
+ */
 class AdjacencyMatrix implements Graph {
+	/**
+	 * { nodes }.
+	 */
 	int nodes;
+	/**
+	 * { edges }
+	 */
 	int edges;
+	/**
+	 * { count of valid edges }.
+	 */
 	int count = 0;
+	/**
+	 * { matrix }
+	 */
 	int[][] matrix;
-	public AdjacencyMatrix(int n, int e) {
+	public AdjacencyMatrix(final int n, final int e) {
 		nodes = n;
 		edges = e;
 		matrix = new int[nodes][nodes];
 	}
+	/**
+	 * { tota number of vertices }.
+	 *
+	 * @return     { count of vertices }
+	 */
 	public int V() {
 		return nodes;
 	}
+	/**
+	 * { total number of edges }.
+	 *
+	 * @return     { count of edges }
+	 */
 	public int E() {
 		return edges;
 	}
-	public Iterable<Integer> adj(int v) {
+	/**
+	 * { adjecent vertices for given vertex }.
+	 *
+	 * @param      v     { vertex }
+	 *
+	 * @return     { adjecent vertices for given vertex }
+	 */
+	public Iterable<Integer> adj(final int v) {
 		return null;
 	}
-	public void addEdge(int v1, int v2) {
+	/**
+	 * Adds an edge.
+	 *
+	 * @param      v1    The v 1
+	 * @param      v2    The v 2
+	 */
+	public void addEdge(final int v1, final int v2) {
 		if (matrix[v1][v2] == 0 && matrix[v2][v1] == 0) {
 			matrix[v1][v2] = 1;
 			matrix[v2][v1] = 1;
 			count++;
 		}
 	}
+	/**
+	 * Determines if it has edge.
+	 *
+	 * @param      v1    The v 1
+	 * @param      v2    The v 2
+	 *
+	 * @return     True if has edge, False otherwise.
+	 */
 	public boolean hasEdge(int v1, int v2) {
 		return matrix[v1][v2] == 1;
 	}
+	/**
+	 * { print the graph }
+	 */
 	public void print() {
 		System.out.println(nodes + " vertices" + ", " + count + " edges");
 		if (count == 0) {
@@ -104,8 +209,22 @@ class AdjacencyMatrix implements Graph {
 	}
 
 }
-class Solution {
-	public static void main(String[] args) {
+/**
+ * Class for solution.
+ */
+final class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+		//constructor
+	}
+	/**
+	 * { main function }
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String type = sc.nextLine();
 		int nodes = Integer.parseInt(sc.nextLine());
@@ -117,7 +236,8 @@ class Solution {
 			for (int i = 0; i < edges; i++) {
 				String[] values = sc.nextLine().split(" ");
 				if (!values[0].equals(values[1])) {
-					al.addEdge(Integer.parseInt(values[0]), Integer.parseInt(values[1]));
+					al.addEdge(Integer.parseInt(values[0]),
+						Integer.parseInt(values[1]));
 				}
 			}
 			al.print();
@@ -127,7 +247,8 @@ class Solution {
 			for (int i = 0; i < edges; i++) {
 				String[] values = sc.nextLine().split(" ");
 				if (!values[0].equals(values[1])) {
-					am.addEdge(Integer.parseInt(values[0]), Integer.parseInt(values[1]));
+					am.addEdge(Integer.parseInt(values[0]),
+						Integer.parseInt(values[1]));
 				}
 			}
 			am.print();
