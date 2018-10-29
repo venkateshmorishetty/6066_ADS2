@@ -41,6 +41,10 @@ class AdjacencyList implements Graph {
 	}
 	public void print() {
 		System.out.println(nodes + " vertices" + ", " + count + " edges");
+		if(count == 0) {
+			System.out.println("No edges");
+			return;
+		}
 		for (int i  = 0; i < nodes; i++) {
 			System.out.print(keys[i]+": ");
 			for (int k : adj(i)) {
