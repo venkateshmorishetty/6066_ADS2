@@ -4,7 +4,7 @@
 class Percolation {
 	/**
 	 * { checks whether it is percolates or not }.
-	 *
+	 * { time complexity for check is O(n^2) }.
 	 * @param      matrix  The matrix
 	 * @param      graph   The graph
 	 * @param      size    The size

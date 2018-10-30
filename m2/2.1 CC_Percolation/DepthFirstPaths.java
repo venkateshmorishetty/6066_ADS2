@@ -3,12 +3,11 @@ public class DepthFirstPaths {
     private boolean[] marked;    // marked[v] = is there an s-v path?
     private int[] edgeTo;        // edgeTo[v] = last edge on s-v path
     private final int s;         // source vertex
-
     /**
-     * Computes a path between {@code s} and every other vertex in graph {@code G}.
-     * @param G the graph
-     * @param s the source vertex
-     * @throws IllegalArgumentException unless {@code 0 <= s < V}
+     * Constructs the object.
+     *
+     * @param      G     { graph }
+     * @param      s     { start }
      */
     public DepthFirstPaths(Graph G, int s) {
         this.s = s;
@@ -17,8 +16,12 @@ public class DepthFirstPaths {
         validateVertex(s);
         dfs(G, s);
     }
-
-    // depth first search from v
+    /**
+     * { dfs }
+     *
+     * @param      G     { graph }
+     * @param      v     { vertex }
+     */
     private void dfs(Graph G, int v) {
         marked[v] = true;
         for (int w : G.adj(v)) {
@@ -28,29 +31,25 @@ public class DepthFirstPaths {
             }
         }
     }
-
     /**
-     * Is there a path between the source vertex {@code s} and vertex {@code v}?
-     * @param v the vertex
-     * @return {@code true} if there is a path, {@code false} otherwise
-     * @throws IllegalArgumentException unless {@code 0 <= v < V}
+     * Determines if it has path to.
+     *
+     * @param      v     { vertex }
+     *
+     * @return     True if has path to, False otherwise.
      */
     public boolean hasPathTo(int v) {
         validateVertex(v);
         return marked[v];
     }
-
-    // throw an IllegalArgumentException unless {@code 0 <= v < V}
+    /**
+     * { validate vertex or not }
+     *
+     * @param      v     { v }
+     */
     private void validateVertex(int v) {
         int V = marked.length;
         if (v < 0 || v >= V)
             throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V-1));
     }
-
-    /**
-     * Unit tests the {@code DepthFirstPaths} data type.
-     *
-     * @param args the command-line arguments
-     */
-
 }
