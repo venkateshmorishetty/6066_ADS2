@@ -16,7 +16,7 @@ public class Digraph {
      *
      * @param      v     { vertices}
      */
-    public Digraph(int v) {
+    public Digraph(final int v) {
         vertices = v;
         edges = 0;
         digraph = new Bag[vertices];
@@ -46,7 +46,7 @@ public class Digraph {
      * @param      v     { vertex 1 }
      * @param      w     { vertex 2 }
      */
-    public void addEdge(int v, int w) {
+    public void addEdge(final int v, final int w) {
         digraph[v].add(w);
         edges++;
     }

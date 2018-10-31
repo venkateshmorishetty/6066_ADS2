@@ -23,14 +23,11 @@ Checkstyle ends with 19 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Digraph.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Digraph.java:1: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Digraph.java:19:20: Parameter v should be final. [FinalParameters]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Digraph.java:32:16: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Digraph.java:40:16: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Digraph.java:49:25: Parameter v should be final. [FinalParameters]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Digraph.java:49:32: Parameter w should be final. [FinalParameters]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Digraph.java:60:34: Parameter v should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 8 errors.
+Checkstyle ends with 5 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:1: Missing a Javadoc comment. [JavadocType]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:23:26: Parameter G should be final. [FinalParameters]
