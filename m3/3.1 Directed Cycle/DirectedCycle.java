@@ -31,7 +31,7 @@ public class DirectedCycle {
             if (!marked[v] && cycle == null) {
                 dfs(g, v);
             }
-        }    
+        }
     }
     /**
      * { depth first search }.
@@ -68,3 +68,4 @@ public class DirectedCycle {
         return cycle != null;
     }
 }
+
