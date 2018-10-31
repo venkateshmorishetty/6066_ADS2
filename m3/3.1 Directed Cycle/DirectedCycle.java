@@ -35,7 +35,7 @@ public class DirectedCycle {
     }
     /**
      * { depth first search }.
-     *
+     * {time complexity is O(E)}
      * @param      g     { graph }
      * @param      v     { vertex }
      */

@@ -29,7 +29,7 @@ public class Digraph {
     }
     /**
      * { number of vertices }.
-     *
+     * {time complexity is O(1)}
      * @return     { number of vertirces }
      */
     public int vertices() {
@@ -37,7 +37,7 @@ public class Digraph {
     }
     /**
      * { edges }.
-     *
+     * {time complexity is O(1)}
      * @return     { number of edges }
      */
     public int edges() {
@@ -45,7 +45,7 @@ public class Digraph {
     }
     /**
      * Adds an edge.
-     *
+     * {time comlexity is O(1)}
      * @param      v     { vertex 1 }
      * @param      w     { vertex 2 }
      */
