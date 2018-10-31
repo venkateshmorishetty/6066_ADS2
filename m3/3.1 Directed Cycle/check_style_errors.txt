@@ -1,9 +1,7 @@
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:40: Expected @return tag. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:46: Expected @return tag. [JavadocMethod]
 Audit done.
-Checkstyle ends with 3 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 Audit done.
 Starting audit...
