@@ -21,26 +21,22 @@ Starting audit...
 Audit done.
 Checkstyle ends with 19 errors.
 Starting audit...
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Digraph.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Digraph.java:1: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Digraph.java:32:16: Name 'V' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Digraph.java:40:16: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Digraph.java:60:34: Parameter v should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 5 errors.
+Checkstyle ends with 2 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:1: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:23:26: Parameter G should be final. [FinalParameters]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:23:34: Name 'G' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:27: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:28: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:36:22: Parameter G should be final. [FinalParameters]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:36:30: Name 'G' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:36:33: Parameter v should be final. [FinalParameters]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:40: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:44:13: '}' at column 13 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:21:8: Unused @param tag for 'G'. [JavadocMethod]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:23:26: Parameter g should be final. [FinalParameters]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:23:34: Expected @param tag for 'g'. [JavadocMethod]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:31: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:36:8: Unused @param tag for 'G'. [JavadocMethod]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:39:36: Expected @param tag for 'g'. [JavadocMethod]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:45:13: '}' at column 13 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:49:13: '}' at column 13 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
 Audit done.
-Checkstyle ends with 10 errors.
+Checkstyle ends with 9 errors.
 Starting audit...
 Audit done.
 Starting audit...

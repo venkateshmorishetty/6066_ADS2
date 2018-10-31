@@ -20,12 +20,15 @@ public class DirectedCycle {
      *
      * @param      G     { digraph }
      */
-    public DirectedCycle(Digraph G) {
-        marked  = new boolean[G.V()];
-        onStack = new boolean[G.V()];
-        edgeTo  = new int[G.V()];
-        for (int v = 0; v < G.V(); v++)
-            if (!marked[v] && cycle == null) dfs(G, v);
+    public DirectedCycle(Digraph g) {
+        marked  = new boolean[g.vertices()];
+        onStack = new boolean[g.vertices()];
+        edgeTo  = new int[g.vertices()];
+        for (int v = 0; v < g.vertices(); v++) {
+            if (!marked[v] && cycle == null) {
+                dfs(g, v);
+            }
+        }    
     }
     /**
      * { depth first search }.
@@ -33,14 +36,16 @@ public class DirectedCycle {
      * @param      G     { graph }
      * @param      v     { vertex }
      */
-    private void dfs(Digraph G, int v) {
+    private void dfs(final Digraph g, final int v) {
         onStack[v] = true;
         marked[v] = true;
-        for (int w : G.adj(v)) {
-            if (cycle != null) return;
+        for (int w : g.adj(v)) {
+            if (cycle != null) {
+                return;
+            }
             else if (!marked[w]) {
                 edgeTo[w] = v;
-                dfs(G, w);
+                dfs(g, w);
             }
             else if (onStack[w]) {
                 cycle = new Stack<Integer>();

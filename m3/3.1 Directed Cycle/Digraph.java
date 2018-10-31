@@ -29,7 +29,7 @@ public class Digraph {
      *
      * @return     { number of vertirces }
      */
-    public int V() {
+    public int vertices() {
         return vertices;
     }
     /**
@@ -37,7 +37,7 @@ public class Digraph {
      *
      * @return     { number of edges }
      */
-    public int E() {
+    public int edges() {
         return edges;
     }
     /**
