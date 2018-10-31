@@ -20,7 +20,7 @@ public class DirectedCycle {
      *
      * @param      G     { digraph }
      */
-    public DirectedCycle(Digraph g) {
+    public DirectedCycle(final Digraph g) {
         marked  = new boolean[g.vertices()];
         onStack = new boolean[g.vertices()];
         edgeTo  = new int[g.vertices()];

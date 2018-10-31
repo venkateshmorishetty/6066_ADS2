@@ -1,42 +1,22 @@
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:3: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:4:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:4:17: Name 'N' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:5:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:6: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:7:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:8:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:22: Expected @return tag. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:29: Expected @return tag. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:36:21: Parameter item should be final. [FinalParameters]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:36:26: Expected @param tag for 'item'. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:48: Expected @return tag. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:49: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:55:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:64:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:65: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:67:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:72: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:40: Expected @return tag. [JavadocMethod]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Bag.java:46: Expected @return tag. [JavadocMethod]
 Audit done.
-Checkstyle ends with 19 errors.
+Checkstyle ends with 3 errors.
 Starting audit...
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Digraph.java:1: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Digraph.java:60:34: Parameter v should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 2 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:1: Missing a Javadoc comment. [JavadocType]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:21:8: Unused @param tag for 'G'. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:23:26: Parameter g should be final. [FinalParameters]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:23:34: Expected @param tag for 'g'. [JavadocMethod]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:23:40: Expected @param tag for 'g'. [JavadocMethod]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:31: Line has trailing spaces. [RegexpSingleline]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:36:8: Unused @param tag for 'G'. [JavadocMethod]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:39:36: Expected @param tag for 'g'. [JavadocMethod]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:45:13: '}' at column 13 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\DirectedCycle.java:49:13: '}' at column 13 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
 Audit done.
-Checkstyle ends with 9 errors.
+Checkstyle ends with 8 errors.
 Starting audit...
 Audit done.
 Starting audit...

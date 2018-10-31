@@ -1,3 +1,6 @@
+/**
+ * Class for digraph.
+ */
 public class Digraph {
     /**
      * { vertices }.
@@ -57,7 +60,7 @@ public class Digraph {
      *
      * @return     { adjecent nodes }
      */
-    public Iterable<Integer> adj(int v) {
+    public Iterable<Integer> adj(final int v) {
         return digraph[v];
     }
 }
