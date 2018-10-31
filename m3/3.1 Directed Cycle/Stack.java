@@ -6,7 +6,13 @@ import java.util.NoSuchElementException;
  * @param      <Item>  The item
  */
 public class Stack<Item> implements Iterable<Item> {
+    /**.
+     * { size }.
+     */
     private int size;
+    /**.
+     * { first }
+     */
     private Node first;
     /**.
      * Class for node.
@@ -28,9 +34,11 @@ public class Stack<Item> implements Iterable<Item> {
         first = null;
         size = 0;
     }
-   /**
-     * Is the stack empty?
-     */
+   /**.
+    * Determines if empty.
+    *
+    * @return     True if empty, False otherwise.
+    */
     public boolean isEmpty() {
         return first == null;
     }
@@ -42,8 +50,10 @@ public class Stack<Item> implements Iterable<Item> {
     public int size() {
         return size;
     }
-   /**
-     * Add the item to the stack.
+    /**.
+     * { push }
+     *
+     * @param      item  The item
      */
     public void push(final Item item) {
         Node oldfirst = first;
@@ -78,8 +88,9 @@ public class Stack<Item> implements Iterable<Item> {
      */
     public String toString() {
         StringBuilder s = new StringBuilder();
-        for (Item item : this)
+        for (Item item : this) {
             s.append(item + " ");
+        }
         return s.toString();
     }
     /**.

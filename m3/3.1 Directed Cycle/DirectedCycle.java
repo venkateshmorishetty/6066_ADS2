@@ -1,3 +1,6 @@
+/**.
+ * Class for directed cycle.
+ */
 public class DirectedCycle {
     /**
      * { marked array }.
@@ -18,7 +21,7 @@ public class DirectedCycle {
     /**
      * Constructs the object.
      *
-     * @param      G     { digraph }
+     * @param      g     { digraph }
      */
     public DirectedCycle(final Digraph g) {
         marked  = new boolean[g.vertices()];
@@ -33,7 +36,7 @@ public class DirectedCycle {
     /**
      * { depth first search }.
      *
-     * @param      G     { graph }
+     * @param      g     { graph }
      * @param      v     { vertex }
      */
     private void dfs(final Digraph g, final int v) {
@@ -42,12 +45,10 @@ public class DirectedCycle {
         for (int w : g.adj(v)) {
             if (cycle != null) {
                 return;
-            }
-            else if (!marked[w]) {
+            } else if (!marked[w]) {
                 edgeTo[w] = v;
                 dfs(g, w);
-            }
-            else if (onStack[w]) {
+            } else if (onStack[w]) {
                 cycle = new Stack<Integer>();
                 for (int x = v; x != w; x = edgeTo[x]) {
                     cycle.push(x);
