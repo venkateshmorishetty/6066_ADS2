@@ -45,15 +45,9 @@ Starting audit...
 Audit done.
 Checkstyle ends with 10 errors.
 Starting audit...
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Solution.java:5:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Solution.java:9:9: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Solution.java:12: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Solution.java:17:33: Parameter args should be final. [FinalParameters]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Solution.java:27:19: 'if' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
-Checkstyle ends with 7 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.1 Directed Cycle\Stack.java:7: Line has trailing spaces. [RegexpSingleline]
