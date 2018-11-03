@@ -4,17 +4,10 @@ Audit done.
 Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Graph.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Graph.java:22:18: Parameter v should be final. [FinalParameters]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Graph.java:33:8: Unused @param tag for 'V'. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Graph.java:34:8: Unused @param tag for 'E'. [JavadocMethod]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Graph.java:36:28: 'vertices' hides a field. [HiddenField]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Graph.java:36:28: Expected @param tag for 'vertices'. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Graph.java:36:37: ',' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Graph.java:36:47: Expected @param tag for 'ed'. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Graph.java:48: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Graph.java:56:16: Name 'E' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Graph.java:36:48: 'edges' hides a field. [HiddenField]
 Audit done.
-Checkstyle ends with 10 errors.
+Checkstyle ends with 3 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Queue.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.

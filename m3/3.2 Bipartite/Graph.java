@@ -19,7 +19,7 @@ public class Graph {
      *
      * @param      v     { v }
      */
-    public Graph(int v) {
+    public Graph(final int v) {
         vertices = v;
         edges = 0;
         adj = (Bag<Integer>[]) new Bag[vertices];
@@ -30,10 +30,10 @@ public class Graph {
     /**
      * Constructs the object.
      *
-     * @param      V     { vertices }
-     * @param      E     { edges }
+     * @param      vertices     { vertices }
+     * @param      edges     { edges }
      */
-    public Graph(final int vertices,final int ed) {
+    public Graph(final int vertices, final int edges) {
         for (int i = 0; i < edges; i++) {
             int v = (int) (Math.random() * vertices);
             int w = (int) (Math.random() * vertices);
@@ -45,7 +45,7 @@ public class Graph {
      *
      * @return     { count }
      */
-    public int vertices() { 
+    public int vertices() {
         return vertices;
     }
     /**.
@@ -53,7 +53,7 @@ public class Graph {
      *
      * @return     { edges }
      */
-    public int E() {
+    public int edges() {
         return edges;
     }
     /**
