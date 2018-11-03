@@ -41,7 +41,7 @@ class Bipartite {
     }
     /**.
      * { dfs }
-     *
+     * {time complexity is O(V+E)}
      * @param      g     { g }
      * @param      v     { v }
      */
@@ -87,7 +87,7 @@ final class Solution {
     }
     /**.
      * { main }
-     *
+     * { time complexity is O(n)}
      * @param      args  The arguments
      */
     public static void main(final String[] args) {

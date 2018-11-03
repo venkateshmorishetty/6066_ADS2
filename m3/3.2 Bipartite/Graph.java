@@ -27,19 +27,6 @@ public class Graph {
             adj[i] = new Bag<Integer>();
         }
     }
-    // /**
-    //  * Constructs the object.
-    //  *
-    //  * @param      vertices     { vertices }
-    //  * @param      edges     { edges }
-    //  */
-    // public Graph(final int v, final int e) {
-    //     for (int i = 0; i < edges; i++) {
-    //         int v = (int) (Math.random() * vertices);
-    //         int w = (int) (Math.random() * vertices);
-    //         addEdge(v, w);
-    //     }
-    // }
     /**.
      * { vertices }
      *
@@ -58,7 +45,7 @@ public class Graph {
     }
     /**
      * Adds an edge.
-     *
+     * {time complexity is O(1)}
      * @param      v     { v }
      * @param      w     { w }
      */
