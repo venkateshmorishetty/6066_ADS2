@@ -50,7 +50,8 @@ class Bipartite {
         for (int w : g.adj(v)) {
             if (cycle != null) {
                 return;
-            } if (!marked[w]) {
+            }
+            if (!marked[w]) {
                 edgeTo[w] = v;
                 color[w] = !color[v];
                 dfs(g, w);

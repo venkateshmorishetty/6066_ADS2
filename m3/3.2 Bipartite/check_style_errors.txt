@@ -4,19 +4,16 @@ Audit done.
 Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Graph.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Graph.java:36:28: 'vertices' hides a field. [HiddenField]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Graph.java:36:48: 'edges' hides a field. [HiddenField]
 Audit done.
-Checkstyle ends with 3 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Queue.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
 Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:53:13: '}' at column 13 should be alone on a line. [RightCurly]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.

@@ -27,19 +27,19 @@ public class Graph {
             adj[i] = new Bag<Integer>();
         }
     }
-    /**
-     * Constructs the object.
-     *
-     * @param      vertices     { vertices }
-     * @param      edges     { edges }
-     */
-    public Graph(final int vertices, final int edges) {
-        for (int i = 0; i < edges; i++) {
-            int v = (int) (Math.random() * vertices);
-            int w = (int) (Math.random() * vertices);
-            addEdge(v, w);
-        }
-    }
+    // /**
+    //  * Constructs the object.
+    //  *
+    //  * @param      vertices     { vertices }
+    //  * @param      edges     { edges }
+    //  */
+    // public Graph(final int v, final int e) {
+    //     for (int i = 0; i < edges; i++) {
+    //         int v = (int) (Math.random() * vertices);
+    //         int w = (int) (Math.random() * vertices);
+    //         addEdge(v, w);
+    //     }
+    // }
     /**.
      * { vertices }
      *
