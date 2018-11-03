@@ -23,24 +23,14 @@ Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:2: Missing a Javadoc comment. [JavadocType]
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:3:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:26:8: Unused @param tag for 'G'. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:28:5: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:28:34: Expected @param tag for 'g'. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:39: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:39:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:39:22: Parameter g should be final. [FinalParameters]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:39:31: Parameter v should be final. [FinalParameters]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:42: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:47:13: '}' at column 13 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:59:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:63: Missing a Javadoc comment. [JavadocType]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:63:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:64:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:64:33: Parameter args should be final. [FinalParameters]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:72:37: ',' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:75:19: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:26:12: Unused @param tag for 'G'. [JavadocMethod]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:28:9: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:28:38: Expected @param tag for 'g'. [JavadocMethod]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:48: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:76:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Solution.java:83: First sentence should end with a period. [JavadocStyle]
 Audit done.
-Checkstyle ends with 19 errors.
+Checkstyle ends with 9 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m3\3.2 Bipartite\Stack.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 Audit done.
