@@ -19,15 +19,15 @@ class PageRank {
 		// System.out.println(Arrays.toString(pageranks)+"   "+graph.V());
 		for (int i = 1; i < 1000; i++) {
 			// for every node
-			for (int j = 0; j < temp.V(); j++) {
+			for (int j = 0; j < graph.V(); j++) {
 				double t = 0.0;
 				//adjacency vertices
 				for (int k : temp.adj(j)) {
 					double temp1;
-					if (temp.outdegree(k) != 0) {
-						temp1 = temp.outdegree(k);
+					// if (graph.outdegree(k) != 0) {
+						temp1 = graph.outdegree(k);
 						t = t + pageranks[k] / temp1;
-					} 
+					// } 
 				}
 				pageranks[j] = t;
 			}
