@@ -9,14 +9,14 @@ class PageRank {
 		pageranks = new double[d.V()];
 	}
 	public double getPR(int v) {
-		//reversing graph
+		//reversing graph to find the incoming nodes.
 		temp = graph.reverse();
 		vertices = temp.V();
+		//initially.
 		for (int i = 0; i < pageranks.length; i++) {
 			pageranks[i] = 1 / vertices;
 		}
 		//1000 times
-		// System.out.println(Arrays.toString(pageranks)+"   "+graph.V());
 		for (int i = 1; i < 1000; i++) {
 			// for every node
 			for (int j = 0; j < graph.V(); j++) {
