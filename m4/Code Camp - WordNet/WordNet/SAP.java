@@ -22,14 +22,6 @@ public class SAP {
      * @return     { length }
      */
     public int length(final int v, final int w) {
-        if (v < 0 || v > digraph.V() - 1) {
-            throw new IndexOutOfBoundsException();
-        }
-
-        if (w < 0 || w > digraph.V() - 1) {
-            throw new IndexOutOfBoundsException();
-        }
-
         if (bfs[v] == null) {
             bfs[v] = new BreadthFirstDirectedPaths(digraph, v);
         }
@@ -48,7 +40,6 @@ public class SAP {
                 }
             }
         }
-        // save memory
         bfs[v] = null;
         bfs[w] = null;
 
@@ -67,14 +58,6 @@ public class SAP {
      * @return     { description_of_the_return_value }
      */
     public int ancestor(final int v, final int w) {
-        if (v < 0 || v > digraph.V() - 1) {
-            throw new IndexOutOfBoundsException();
-        }
-
-        if (w < 0 || w > digraph.V() - 1) {
-            throw new IndexOutOfBoundsException();
-        }
-
         if (bfs[v] == null) {
             bfs[v] = new BreadthFirstDirectedPaths(digraph, v);
         }
@@ -95,8 +78,6 @@ public class SAP {
                 }
             }
         }
-
-        // save memory
         bfs[v] = null;
         bfs[w] = null;
 
@@ -124,9 +105,6 @@ public class SAP {
                 }
             }
         }
-
-        assert length != -1;
-
         if (length != Integer.MAX_VALUE) {
             return length;
         } else {

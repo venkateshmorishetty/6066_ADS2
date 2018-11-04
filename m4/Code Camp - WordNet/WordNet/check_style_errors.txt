@@ -394,9 +394,9 @@ Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m4\Code Camp - WordNet\WordNet\SAP.java:5:5: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] D:\msit\ADS2\6066_ADS2\m4\Code Camp - WordNet\WordNet\SAP.java:6:5: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] D:\msit\ADS2\6066_ADS2\m4\Code Camp - WordNet\WordNet\SAP.java:16: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\msit\ADS2\6066_ADS2\m4\Code Camp - WordNet\WordNet\SAP.java:61: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\msit\ADS2\6066_ADS2\m4\Code Camp - WordNet\WordNet\SAP.java:105: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\msit\ADS2\6066_ADS2\m4\Code Camp - WordNet\WordNet\SAP.java:136: First sentence should end with a period. [JavadocStyle]
+[ERROR] D:\msit\ADS2\6066_ADS2\m4\Code Camp - WordNet\WordNet\SAP.java:52: First sentence should end with a period. [JavadocStyle]
+[ERROR] D:\msit\ADS2\6066_ADS2\m4\Code Camp - WordNet\WordNet\SAP.java:86: First sentence should end with a period. [JavadocStyle]
+[ERROR] D:\msit\ADS2\6066_ADS2\m4\Code Camp - WordNet\WordNet\SAP.java:114: First sentence should end with a period. [JavadocStyle]
 Audit done.
 Checkstyle ends with 7 errors.
 Starting audit...
