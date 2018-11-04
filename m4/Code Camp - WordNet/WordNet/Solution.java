@@ -25,8 +25,10 @@ final class Solution {
             Scanner s = new Scanner(new FileReader(temp));
             int size = 0;
             String str;
-            LinearProbingHashST<String, ArrayList<Integer>> first = new LinearProbingHashST<String, ArrayList<Integer>>();
-            LinearProbingHashST<Integer, String> second = new LinearProbingHashST<Integer, String>();
+            LinearProbingHashST<String, ArrayList<Integer>> first =
+            new LinearProbingHashST<String, ArrayList<Integer>>();
+            LinearProbingHashST<Integer, String> second =
+            new LinearProbingHashST<Integer, String>();
             while (s.hasNext()) {
                 size++;
                 String[] line = s.nextLine().split(",");
@@ -54,7 +56,8 @@ final class Solution {
                 str = s.nextLine();
                 String[] values = str.split(",");
                 for (int i = 1; i < values.length; i++) {
-                    d.addEdge(Integer.parseInt(values[0]), Integer.parseInt(values[i]));
+                    d.addEdge(Integer.parseInt(values[0]),
+                        Integer.parseInt(values[i]));
                 }
             }
             String type = sc.nextLine();
@@ -85,8 +88,8 @@ final class Solution {
                     int dist = shortest.length(id1, id2);
                     int a = shortest.ancestor(id1, id2);
                     String ancestor =  second.get(a);
-                    System.out.println("distance = " + dist + ", " +
-                        "ancestor = " + ancestor);
+                    System.out.println("distance = " + dist + ", "
+                        + "ancestor = " + ancestor);
                 }
             }
         } catch (Exception e) {
