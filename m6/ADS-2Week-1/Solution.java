@@ -19,10 +19,11 @@ class PageRank {
 	 * Gets the pr.
 	 *
 	 * @param      v     { v }
-	 *  time complexity for getPR is O(K*V*E) where k =1000
+	 *  time complexity for getPR is O(K*V^2*E) where k =1000
 	 *  first loop runs 1000 times
-	 *  second loops runs V times for every i
+	 *  second loops runs V times for every i.
 	 *  third loop runs number of edges times.
+	 *  every time we copy the array 
 	 * @return     The pr.
 	 */
 	public double getPR(int v) {
