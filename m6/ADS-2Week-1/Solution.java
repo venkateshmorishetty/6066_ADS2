@@ -31,7 +31,7 @@ class PageRank {
 		}
 		// System.out.println(Arrays.toString(temparr));
 		//1000 times
-		for (int i = 1; i < 1000; i++) {
+		for (int i = 0; i < 1000; i++) {
 			// for every node
 			for (int j = 0; j < vertices; j++) {
 				double t = 0.0;
