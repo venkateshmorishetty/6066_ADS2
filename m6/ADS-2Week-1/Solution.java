@@ -5,11 +5,26 @@ class PageRank {
 	double[] pageranks;
 	double[] temparr;
 	double vertices;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      d     { digraph }
+	 */
 	PageRank(Digraph d) {
 		graph = d;
 		temparr = new double[d.V()];
 		pageranks = new double[d.V()];
 	}
+	/**
+	 * Gets the pr.
+	 *
+	 * @param      v     { v }
+	 *  time complexity for getPR is O(K*V*E) where k =1000
+	 *  first loop runs 1000 times
+	 *  second loops runs V times for every i
+	 *  third loop runs number of edges times.
+	 * @return     The pr.
+	 */
 	public double getPR(int v) {
 		//reversing graph to find the incoming nodes.
 		//if there is no edge connect to all other nodes.
@@ -45,7 +60,11 @@ class PageRank {
 		}
 		return pageranks[v];
 	}
-
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		double temp = getPR(0);
 		String s = "";
@@ -62,6 +81,13 @@ class WebSearch {
 
 
 public class Solution {
+	/**.
+	 * { main }
+	 * time complexity for main O(V*E)
+	 * where first loop runs number of vertices times
+	 * and inner loops add edge every time so E times.
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		// read the first line of the input to get the number of vertices
 		Scanner sc =  new Scanner(System.in);

@@ -142,7 +142,7 @@ public class Digraph {
 
     /**
      * Returns the number of edges in this digraph.
-     *
+     * time complexity is o(1)
      * @return the number of edges in this digraph
      */
     public int E() {
@@ -158,7 +158,7 @@ public class Digraph {
 
     /**
      * Adds the directed edge v→w to this digraph.
-     *
+     * time complexity is O(1)
      * @param  v the tail vertex
      * @param  w the head vertex
      * @throws IllegalArgumentException unless both {@code 0 <= v < V} and {@code 0 <= w < V}
