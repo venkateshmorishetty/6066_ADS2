@@ -3,36 +3,46 @@ class PageRank {
 	Digraph graph;
 	Digraph temp;
 	double[] pageranks;
+	double[] temparr;
 	double vertices;
 	PageRank(Digraph d) {
 		graph = d;
+		temparr = new double[d.V()];
 		pageranks = new double[d.V()];
 	}
 	public double getPR(int v) {
 		//reversing graph to find the incoming nodes.
-		temp = graph.reverse();
-		vertices = temp.V();
-		//initially.
-		for (int i = 0; i < pageranks.length; i++) {
-			pageranks[i] = 1 / vertices;
+		//if there is no edge connect to all other nodes.
+		for (int i = 0; i < graph.V(); i++) {
+			if (graph.outdegree(i) == 0) {
+				for (int j = 0; j < graph.V(); j++) {
+					if (i != j) {
+						graph.addEdge(i, j);
+					}
+				}
+			}
 		}
+		temp = graph.reverse();
+
+		vertices = (double)temp.V();
+		//initially.
+		for (int i = 0; i < temparr.length; i++) {
+			pageranks[i] = 1.0 / vertices;
+		}
+		// System.out.println(Arrays.toString(temparr));
 		//1000 times
 		for (int i = 1; i < 1000; i++) {
 			// for every node
-			for (int j = 0; j < graph.V(); j++) {
+			for (int j = 0; j < vertices; j++) {
 				double t = 0.0;
 				//adjacency vertices
 				for (int k : temp.adj(j)) {
-					double temp1;
-					// if (graph.outdegree(k) != 0) {
-						temp1 = graph.outdegree(k);
-						t = t + pageranks[k] / temp1;
-					// } 
+					t += (pageranks[k] / (double)graph.outdegree(k));
 				}
-				pageranks[j] = t;
+				temparr[j] = t;
 			}
+		pageranks = Arrays.copyOf(temparr, temparr.length);
 		}
-		// System.out.println(Arrays.toString(pageranks));
 		return pageranks[v];
 	}
 
