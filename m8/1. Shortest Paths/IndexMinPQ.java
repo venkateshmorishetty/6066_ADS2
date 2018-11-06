@@ -1,4 +1,3 @@
-import java.util.NoSuchElementException;
 /**
  * Class for index minimum pq.
  *
@@ -6,7 +5,7 @@ import java.util.NoSuchElementException;
  */
 public class IndexMinPQ<Key extends Comparable<Key>> {
     /**.
-     * { maxN }
+     * { maxn }
      */
     private int maxn;
     /**.
@@ -28,10 +27,10 @@ public class IndexMinPQ<Key extends Comparable<Key>> {
     /**
      * Constructs the object.
      *
-     * @param      maxN  The maximum n
+     * @param      max  The maximum n
      */
-    public IndexMinPQ(final int maxn) {
-        this.maxn = maxn;
+    public IndexMinPQ(final int max) {
+        this.maxn = max;
         n = 0;
         keys = (Key[]) new Comparable[maxn + 1];
         pq   = new int[maxn + 1];
