@@ -111,7 +111,6 @@ class EdgeWeightedGraph {
     }
     /**.
      * { edges }
-     * 
      * @return     { connected vertices }
      */
     public Iterable<Edge> edges() {
