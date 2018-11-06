@@ -100,7 +100,7 @@ class EdgeWeightedGraph {
     }
     /**
      * Adds an edge.
-     *
+     * {time complexity is O(1)}
      * @param      e     { edge }
      */
     public void addEdge(final Edge e) {
@@ -146,7 +146,7 @@ class ShortestPath {
     private IndexMinPQ<Double> pq;
     /**
      * Constructs the object.
-     *
+     * {time complexity is O(E+V)}
      * @param      g     { g }
      * @param      s     { s }
      */
@@ -168,7 +168,7 @@ class ShortestPath {
     }
     /**.
      * { relaxing edge }
-     *
+     * {time complexity is O(logE)}
      * @param      e     { e }
      * @param      v     { v }
      */
@@ -218,7 +218,7 @@ final class Solution {
     }
     /**.
      * { main function }
-     *
+     * { time complexity O(E+V)}
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
