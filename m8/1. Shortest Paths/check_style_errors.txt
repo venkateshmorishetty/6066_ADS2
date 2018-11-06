@@ -1,8 +1,5 @@
 Starting audit...
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:88:12: Unused @param tag for 'first'. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:90:39: Expected @param tag for 'f'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 2 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:4: Line is longer than 80 characters (found 83). [LineLength]
 [ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:4: Missing a Javadoc comment. [JavadocType]

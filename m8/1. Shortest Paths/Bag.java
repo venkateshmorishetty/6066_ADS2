@@ -85,7 +85,7 @@ public class Bag<Item> implements Iterable<Item> {
         /**
          * Constructs the object.
          *
-         * @param      first  The first
+         * @param      f  The first
          */
         ListIterator(final Node<Item> f) {
             current = f;
