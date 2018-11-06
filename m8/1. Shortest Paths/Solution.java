@@ -218,7 +218,7 @@ final class Solution {
     }
     /**.
      * { main function }
-     * { time complexity O(E+V)}
+     * { time complexity O(V+E+k) k=number of qureries}
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
