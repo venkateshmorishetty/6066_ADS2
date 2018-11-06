@@ -87,8 +87,8 @@ public class Bag<Item> implements Iterable<Item> {
          *
          * @param      first  The first
          */
-        public ListIterator(Node<Item> first) {
-            current = first;
+        ListIterator(final Node<Item> f) {
+            current = f;
         }
         /**
          * Determines if it has next.
