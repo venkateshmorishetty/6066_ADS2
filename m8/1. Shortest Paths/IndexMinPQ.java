@@ -1,4 +1,3 @@
-import java.util.Iterator;
 import java.util.NoSuchElementException;
 /**
  * Class for index minimum pq.
@@ -9,7 +8,7 @@ public class IndexMinPQ<Key extends Comparable<Key>> {
     /**.
      * { maxN }
      */
-    private int maxN;
+    private int maxn;
     /**.
      * { n }
      */
@@ -31,15 +30,15 @@ public class IndexMinPQ<Key extends Comparable<Key>> {
      *
      * @param      maxN  The maximum n
      */
-    public IndexMinPQ(final int maxN) {
-        if (maxN < 0) throw new IllegalArgumentException();
-        this.maxN = maxN;
+    public IndexMinPQ(final int maxn) {
+        this.maxn = maxn;
         n = 0;
-        keys = (Key[]) new Comparable[maxN + 1];
-        pq   = new int[maxN + 1];
-        qp   = new int[maxN + 1];
-        for (int i = 0; i <= maxN; i++)
+        keys = (Key[]) new Comparable[maxn + 1];
+        pq   = new int[maxn + 1];
+        qp   = new int[maxn + 1];
+        for (int i = 0; i <= maxn; i++) {
             qp[i] = -1;
+        }
     }
     /**
      * Determines if empty.
@@ -57,7 +56,6 @@ public class IndexMinPQ<Key extends Comparable<Key>> {
      * @return     { true if it is, else false }
      */
     public boolean contains(final int i) {
-        if (i < 0 || i >= maxN) throw new IllegalArgumentException();
         return qp[i] != -1;
     }
     /**.
@@ -74,9 +72,7 @@ public class IndexMinPQ<Key extends Comparable<Key>> {
      * @param      i     { i }
      * @param      key   The key
      */
-    public void insert(int i, Key key) {
-        if (i < 0 || i >= maxN) throw new IllegalArgumentException();
-        if (contains(i)) throw new IllegalArgumentException("index is already in the priority queue");
+    public void insert(final int i, final Key key) {
         n++;
         qp[i] = n;
         pq[n] = i;
@@ -89,14 +85,13 @@ public class IndexMinPQ<Key extends Comparable<Key>> {
      * @return     { min item }
      */
     public int delMin() {
-        if (n == 0) throw new NoSuchElementException("Priority queue underflow");
         int min = pq[1];
         exch(1, n--);
         sink(1);
-        assert min == pq[n+1];
+        assert min == pq[n + 1];
         qp[min] = -1;
         keys[min] = null;
-        pq[n+1] = -1;
+        pq[n + 1] = -1;
         return min;
     }
     /**.
@@ -136,26 +131,30 @@ public class IndexMinPQ<Key extends Comparable<Key>> {
     /**.
      * { swim }
      *
-     * @param      k     { k }
+     * @param      temp     { k }
      */
     private void swim(final int temp) {
         int k = temp;
-        while (k > 1 && greater(k/2, k)) {
-            exch(k, k/2);
-            k = k/2;
+        while (k > 1 && greater(k / 2, k)) {
+            exch(k, k / 2);
+            k = k / 2;
         }
     }
     /**.
      * { sink }
      *
-     * @param      k     { k }
+     * @param      temp     { k }
      */
     private void sink(final int temp) {
         int k = temp;
-        while (2*k <= n) {
-            int j = 2*k;
-            if (j < n && greater(j, j+1)) j++;
-            if (!greater(k, j)) break;
+        while (2 * k <= n) {
+            int j = 2 * k;
+            if (j < n && greater(j, j + 1)) {
+                j++;
+            }
+            if (!greater(k, j)) {
+                break;
+            }
             exch(k, j);
             k = j;
         }

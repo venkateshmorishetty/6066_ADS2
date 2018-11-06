@@ -1,42 +1,12 @@
 Starting audit...
 Audit done.
 Starting audit...
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:1:8: Unused import - java.util.Iterator. [UnusedImports]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:34:33: 'maxN' hides a field. [HiddenField]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:35: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:41: 'for' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:60: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:77:24: Parameter i should be final. [FinalParameters]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:77:31: Parameter key should be final. [FinalParameters]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:78: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:79: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:79: Line is longer than 80 characters (found 102). [LineLength]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:92: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:92: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:96:27: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:96:28: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:99:13: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:99:14: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:139:8: Unused @param tag for 'k'. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:141:33: Expected @param tag for 'temp'. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:143:34: '/' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:143:35: '/' is not followed by whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:144:22: '/' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:144:23: '/' is not followed by whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:145:18: '/' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:145:19: '/' is not followed by whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:151:8: Unused @param tag for 'k'. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:153:33: Expected @param tag for 'temp'. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:155:17: '*' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:155:18: '*' is not followed by whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:156:22: '*' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:156:23: '*' is not followed by whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:157: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:157:38: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:157:39: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:158: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:1:8: Unused import - java.util.NoSuchElementException. [UnusedImports]
+[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:31:8: Unused @param tag for 'maxN'. [JavadocMethod]
+[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:33:33: 'maxn' hides a field. [HiddenField]
+[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:33:33: Expected @param tag for 'maxn'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 34 errors.
+Checkstyle ends with 4 errors.
 Starting audit...
 Audit done.
 Starting audit...
