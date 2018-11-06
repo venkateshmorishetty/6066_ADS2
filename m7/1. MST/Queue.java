@@ -68,7 +68,7 @@ public class Queue<Item> implements Iterable<Item> {
     }
     /**
      * Add the item to the queue.
-     *
+     * {time complexity is O(1 )}
      * @param      item  The item
      */
     public void enqueue(final Item item) {
@@ -87,7 +87,7 @@ public class Queue<Item> implements Iterable<Item> {
     /**
      * Remove and return the item on the queue least recently added. Throw an
      * exception if the queue is empty.
-     *
+     * {time complexity is O(1)}
      * @return     item.
      */
     public Item dequeue() {
@@ -105,7 +105,7 @@ public class Queue<Item> implements Iterable<Item> {
 
     /**
      * Return string representation.
-     *
+     * {time complexity is O(n)}
      * @return     String representation of the object.
      */
     public String toString() {
@@ -148,7 +148,7 @@ public class Queue<Item> implements Iterable<Item> {
         }
         /**
          * Item.
-         *
+         * {time complexity is O(1)}
          * @return     item.
          */
         public Item next() {

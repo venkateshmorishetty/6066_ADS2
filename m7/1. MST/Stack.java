@@ -52,7 +52,7 @@ public class Stack<Item> implements Iterable<Item> {
     }
     /**.
      * { push }
-     *
+     * {time complexity is O(1)}
      * @param      item  The item
      */
     public void push(final Item item) {
@@ -64,7 +64,7 @@ public class Stack<Item> implements Iterable<Item> {
     }
     /**.
      * { pop }
-     *
+     * {time complexity is O(1)}
      * @return     { item }
      */
     public Item pop() {
@@ -83,7 +83,7 @@ public class Stack<Item> implements Iterable<Item> {
     }
     /**.
      * Returns a string representation of the object.
-     *
+     * {time complexity is O(n)}
      * @return     String representation of the object.
      */
     public String toString() {
@@ -125,7 +125,7 @@ public class Stack<Item> implements Iterable<Item> {
         }
         /**
          * { next }.
-         *
+         * {time complexity is O(1)}
          * @return     { return current value }
          */
         public Item next() {
