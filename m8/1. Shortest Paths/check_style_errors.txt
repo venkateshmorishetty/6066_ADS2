@@ -1,22 +1,9 @@
 Starting audit...
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:23:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:24:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:61: First sentence should end with a period. [JavadocStyle]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:67: Line has trailing spaces. [RegexpSingleline]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:75:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:77:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:77:9: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:77:29: Parameter first should be final. [FinalParameters]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:77:40: 'first' hides a field. [HiddenField]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:80: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:80:35: '{' at column 35 should have line break after. [LeftCurly]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:81: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:81:35: '{' at column 35 should have line break after. [LeftCurly]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:82:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:83: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:85: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:90:9: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:90:29: Parameter first should be final. [FinalParameters]
+[ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\Bag.java:90:40: 'first' hides a field. [HiddenField]
 Audit done.
-Checkstyle ends with 16 errors.
+Checkstyle ends with 3 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:4: Line is longer than 80 characters (found 83). [LineLength]
 [ERROR] D:\msit\ADS2\6066_ADS2\m8\1. Shortest Paths\IndexMinPQ.java:4: Missing a Javadoc comment. [JavadocType]

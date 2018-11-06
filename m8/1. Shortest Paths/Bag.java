@@ -20,7 +20,13 @@ public class Bag<Item> implements Iterable<Item> {
      * @param      <Item>  The item
      */
     private static class Node<Item> {
+        /**.
+         * { item }
+         */
         private Item item;
+        /**.
+         * { next }
+         */
         private Node<Item> next;
     }
     /**
@@ -58,13 +64,13 @@ public class Bag<Item> implements Iterable<Item> {
         first.next = oldfirst;
         n++;
     }
-    /**
+    /**.
      * { iterator }
      *
      * @return     { item }
      */
     public Iterator<Item> iterator()  {
-        return new ListIterator<Item>(first);  
+        return new ListIterator<Item>(first);
     }
     /**
      * Class for list iterator.
@@ -72,17 +78,43 @@ public class Bag<Item> implements Iterable<Item> {
      * @param      <Item>  The item
      */
     private class ListIterator<Item> implements Iterator<Item> {
+        /**.
+         * { current }
+         */
         private Node<Item> current;
-
+        /**
+         * Constructs the object.
+         *
+         * @param      first  The first
+         */
         public ListIterator(Node<Item> first) {
             current = first;
         }
-        public boolean hasNext()  { return current != null;                     }
-        public void remove()      { throw new UnsupportedOperationException();  }
+        /**
+         * Determines if it has next.
+         *
+         * @return     True if has next, False otherwise.
+         */
+        public boolean hasNext() {
+            return current != null;
+        }
+        /**.
+         * { remove }
+         */
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
+        /**.
+         * { next }
+         *
+         * @return     { item }
+         */
         public Item next() {
-            if (!hasNext()) throw new NoSuchElementException();
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
             Item item = current.item;
-            current = current.next; 
+            current = current.next;
             return item;
         }
     }
