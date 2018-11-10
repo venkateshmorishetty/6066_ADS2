@@ -309,7 +309,6 @@ public class Solution {
 			ShortestPath st1 = new ShortestPath(g, Integer.parseInt(arr[0]));
 			double distance1 = st1.distTo(Integer.parseInt(arr[1]));
 			ShortestPath st2 = new ShortestPath(g, Integer.parseInt(arr[1]));
-			path = path + arr[2];
 			double distance2 = st2.distTo(Integer.parseInt(arr[2]));
 			if (distance1 == -1 || distance2 == -1) {
 				System.out.println("No Path Found.");
@@ -320,6 +319,7 @@ public class Solution {
 				for (int i : st2.pathTo(Integer.parseInt(arr[2]))) {
 					path += i + " ";
 				}
+				path = path + arr[2];
 				double total  = distance1 + distance2;
 				System.out.println(total);
 				System.out.println(path);

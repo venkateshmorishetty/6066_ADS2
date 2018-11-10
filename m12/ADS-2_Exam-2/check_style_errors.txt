@@ -76,8 +76,8 @@ Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:303: Line is longer than 80 characters (found 110). [LineLength]
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:309: Line is longer than 80 characters (found 89). [LineLength]
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:311: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:317: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:320: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:316: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:319: Line is longer than 80 characters (found 84). [LineLength]
 Audit done.
 Checkstyle ends with 75 errors.
 Starting audit...
