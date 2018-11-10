@@ -1,34 +1,66 @@
 import java.util.Scanner;
 class Edge implements Comparable<Edge> {
-
+	/**.
+	 * { v }
+	 */
 	private final int v;
+	/**.
+	 * { w }
+	 */
 	private final int w;
+	/**.
+	 * { weight }
+	 */
 	private final double weight;
-	public Edge(int v, int w, double weight) {
-		if (v < 0) throw new IllegalArgumentException("vertex index must be a nonnegative integer");
-		if (w < 0) throw new IllegalArgumentException("vertex index must be a nonnegative integer");
-		if (Double.isNaN(weight)) throw new IllegalArgumentException("Weight is NaN");
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      v       { v }
+	 * @param      w       { w }
+	 * @param      weight  The weight
+	 */
+	public Edge(final int v, final int w, final double weight) {
 		this.v = v;
 		this.w = w;
 		this.weight = weight;
 	}
+	/**
+	 * { weight }
+	 *
+	 * @return     { weight }
+	 */
 	public double weight() {
 		return weight;
 	}
-
+	/**
+	 * { either }
+	 *
+	 * @return     { either }
+	 */
 	public int either() {
 		return v;
 	}
-
-	public int other(int vertex) {
+	/**
+	 * { other }
+	 *
+	 * @param      vertex  The vertex
+	 *
+	 * @return     { other }
+	 */
+	public int other(final int vertex) {
 		if      (vertex == v) return w;
 		else if (vertex == w) return v;
 		else throw new IllegalArgumentException("Illegal endpoint");
 	}
 	@Override
-	public int compareTo(Edge that) {
+	public int compareTo(final Edge that) {
 		return Double.compare(this.weight, that.weight);
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		return String.format("%d-%d %.5f", v, w, weight);
 	}
@@ -56,13 +88,13 @@ class ShortestPath {
 	 * @param      s     { s }
 	 */
 	ShortestPath(final EdgeWeightedGraph g, final int s) {
-		distTo = new double[g.V()];
-		edgeTo = new Edge[g.V()];
-		for (int v = 0; v < g.V(); v++) {
+		distTo = new double[g.vertices()];
+		edgeTo = new Edge[g.vertices()];
+		for (int v = 0; v < g.vertices(); v++) {
 			distTo[v] = Double.POSITIVE_INFINITY;
 		}
 		distTo[s] = 0;
-		pq = new IndexMinPQ<Double>(g.V());
+		pq = new IndexMinPQ<Double>(g.vertices());
 		pq.insert(s, distTo[s]);
 		while (!pq.isEmpty()) {
 			int v = pq.delMin();
@@ -112,9 +144,14 @@ class ShortestPath {
 	public boolean hasPathTo(final int v) {
 		return distTo[v] < Double.POSITIVE_INFINITY;
 	}
-
-
-	public Iterable<Integer> pathTo(int v) {
+	/**.
+	 * { path }
+	 *
+	 * @param      v     { v }
+	 *
+	 * @return     { path }
+	 */
+	public Iterable<Integer> pathTo(final int v) {
 		if (!hasPathTo(v)) return null;
 		Stack<Integer> path = new Stack<Integer>();
 		int x = v;
@@ -129,93 +166,100 @@ class ShortestPath {
  * Class for edge weighted graph.
  */
 class EdgeWeightedGraph {
-	private static final String NEWLINE = System.getProperty("line.separator");
-
-	private final int V;
-	private int E;
+	/**.
+	 * { new line }
+	 */
+	private static final String NEWLINE = System.getProperty("line.separator");	
+	/**.
+	 * { vertices }
+	 */
+	private final int vertices;
+	/**.
+	 * { edges }
+	 */
+	private int edges;
+	/**.
+	 * { adj }
+	 */
 	private Bag<Edge>[] adj;
-	public EdgeWeightedGraph(int V) {
-		this.V = V;
-		this.E = 0;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      V     { v }
+	 */
+	public EdgeWeightedGraph(final int V) {
+		this.vertices = V;
+		this.edges = 0;
 		adj = (Bag<Edge>[]) new Bag[V];
 		for (int v = 0; v < V; v++) {
 			adj[v] = new Bag<Edge>();
 		}
 	}
 	/**
-	 * Returns the number of vertices in this edge-weighted graph.
+	 * { vertices }
 	 *
-	 * @return the number of vertices in this edge-weighted graph
+	 * @return     { vertices }
 	 */
-	public int V() {
-		return V;
+	public int vertices() {
+		return vertices;
 	}
-
+	/**.
+	 * { edges }
+	 *
+	 * @return     { edges }
+	 */
+	public int countedges() {
+		return edges;
+	}
 	/**
-	 * Returns the number of edges in this edge-weighted graph.
+	 * { validate or not }
 	 *
-	 * @return the number of edges in this edge-weighted graph
+	 * @param      v     { v }
 	 */
-	public int E() {
-		return E;
-	}
-
-	// throw an IllegalArgumentException unless {@code 0 <= v < V}
-	private void validateVertex(int v) {
-		if (v < 0 || v >= V)
-			throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V - 1));
-	}
-
+	// private void validateVertex(final int v) {
+	// 	if (v < 0 || v >= V)
+	// 		throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V - 1));
+	// }
 	/**
-	 * Adds the undirected edge {@code e} to this edge-weighted graph.
+	 * Adds an edge.
 	 *
-	 * @param  e the edge
-	 * @throws IllegalArgumentException unless both endpoints are between {@code 0} and {@code V-1}
+	 * @param      e     { e }
 	 */
-	public void addEdge(Edge e) {
+	public void addEdge(final Edge e) {
 		int v = e.either();
 		int w = e.other(v);
-		validateVertex(v);
-		validateVertex(w);
 		adj[v].add(e);
 		adj[w].add(e);
-		E++;
+		edges++;
 	}
-
-	/**
-	 * Returns the edges incident on vertex {@code v}.
+	/**.
+	 * { adj }
 	 *
-	 * @param  v the vertex
-	 * @return the edges incident on vertex {@code v} as an Iterable
-	 * @throws IllegalArgumentException unless {@code 0 <= v < V}
+	 * @param      v     { v }
+	 *
+	 * @return     { edge }
 	 */
 	public Iterable<Edge> adj(int v) {
-		validateVertex(v);
 		return adj[v];
 	}
-
-	/**
-	 * Returns the degree of vertex {@code v}.
+	/**.
+	 * { degree }
 	 *
-	 * @param  v the vertex
-	 * @return the degree of vertex {@code v}
-	 * @throws IllegalArgumentException unless {@code 0 <= v < V}
+	 * @param      v     { v }
+	 *
+	 * @return     { degree }
 	 */
 	public int degree(int v) {
-		validateVertex(v);
 		return adj[v].size();
 	}
-
-	/**
-	 * Returns all edges in this edge-weighted graph.
-	 * To iterate over the edges in this edge-weighted graph, use foreach notation:
-	 * {@code for (Edge e : G.edges())}.
+	/**.
+	 * { edges }
 	 *
-	 * @return all edges in this edge-weighted graph, as an iterable
+	 * @return     { edges }
 	 */
 	public Iterable<Edge> edges() {
 		Bag<Edge> list = new Bag<Edge>();
-		for (int v = 0; v < V; v++) {
+		for (int v = 0; v < vertices; v++) {
 			int selfLoops = 0;
 			for (Edge e : adj(v)) {
 				if (e.other(v) > v) {
@@ -223,25 +267,24 @@ class EdgeWeightedGraph {
 				}
 				// only add one copy of each self loop (self loops will be consecutive)
 				else if (e.other(v) == v) {
-					if (selfLoops % 2 == 0) list.add(e);
+					if (selfLoops % 2 == 0) {
+						list.add(e);
+					}
 					selfLoops++;
 				}
 			}
 		}
 		return list;
 	}
-
-	/**
-	 * Returns a string representation of the edge-weighted graph.
-	 * This method takes time proportional to <em>E</em> + <em>V</em>.
+	/**.
+	 * Returns a string representation of the object.
 	 *
-	 * @return the number of vertices <em>V</em>, followed by the number of edges <em>E</em>,
-	 *         followed by the <em>V</em> adjacency lists of edges
+	 * @return     String representation of the object.
 	 */
 	public String toString() {
 		StringBuilder s = new StringBuilder();
-		s.append(V + " vertices " + E + " edges" + NEWLINE);
-		for (int v = 0; v < V; v++) {
+		s.append(vertices + " vertices " + edges + " edges" + NEWLINE);
+		for (int v = 0; v < vertices; v++) {
 			s.append(v + ": ");
 			for (Edge e : adj[v]) {
 				s.append(e + "  ");
@@ -249,12 +292,6 @@ class EdgeWeightedGraph {
 			s.append(NEWLINE);
 		}
 		return s.toString();
-	}
-
-
-
-	public void findMin(int source, int dest) {
-
 	}
 }
 public class Solution {
