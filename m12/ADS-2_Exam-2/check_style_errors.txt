@@ -62,8 +62,6 @@ Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:224: Line is longer than 80 characters (found 103). [LineLength]
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:226: 'if' construct must use '{}'s. [NeedBraces]
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:238: Line is longer than 80 characters (found 97). [LineLength]
-[ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:243:48: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:243:56: '+' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:256:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:256:29: Parameter source should be final. [FinalParameters]
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:256:41: Parameter dest should be final. [FinalParameters]
@@ -76,14 +74,11 @@ Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:297: Line is longer than 80 characters (found 88). [LineLength]
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:302: Line is longer than 80 characters (found 87). [LineLength]
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:303: Line is longer than 80 characters (found 110). [LineLength]
+[ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:309: Line is longer than 80 characters (found 89). [LineLength]
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:311: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:313: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:315:42: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:315:43: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:317: Line is longer than 80 characters (found 89). [LineLength]
-[ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:319:42: '+' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:319:43: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:317: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:320: Line is longer than 80 characters (found 84). [LineLength]
 Audit done.
-Checkstyle ends with 80 errors.
+Checkstyle ends with 75 errors.
 Starting audit...
 Audit done.

@@ -240,7 +240,7 @@ class EdgeWeightedGraph {
 	 */
 	public String toString() {
 		StringBuilder s = new StringBuilder();
-		s.append(V + " vertices " + E +" edges"+ NEWLINE);
+		s.append(V + " vertices " + E + " edges" + NEWLINE);
 		for (int v = 0; v < V; v++) {
 			s.append(v + ": ");
 			for (Edge e : adj[v]) {
@@ -305,24 +305,21 @@ public class Solution {
 			// If the path exists print the distance between them.
 			// Other wise print "No Path Found."
 			String path = "";
-			// ArrayList<Integer> vr = new ArrayList<Integer>();
-
 			String[] arr = sc.nextLine().split(" ");
 			ShortestPath st1 = new ShortestPath(g, Integer.parseInt(arr[0]));
 			double distance1 = st1.distTo(Integer.parseInt(arr[1]));
-			// System.out.println(st1.pathTo(Integer.parseInt(arr[1])));
-			for (int i:st1.pathTo(Integer.parseInt(arr[1]))) {
-				path += i+" ";
-			}
 			ShortestPath st2 = new ShortestPath(g, Integer.parseInt(arr[1]));
-			for (int i:st2.pathTo(Integer.parseInt(arr[2]))) {
-				path += i+" ";
-			}
 			path = path + arr[2];
 			double distance2 = st2.distTo(Integer.parseInt(arr[2]));
 			if (distance1 == -1 || distance2 == -1) {
 				System.out.println("No Path Found.");
 			} else {
+				for (int i : st1.pathTo(Integer.parseInt(arr[1]))) {
+					path += i + " ";
+				}
+				for (int i : st2.pathTo(Integer.parseInt(arr[2]))) {
+					path += i + " ";
+				}
 				double total  = distance1 + distance2;
 				System.out.println(total);
 				System.out.println(path);
