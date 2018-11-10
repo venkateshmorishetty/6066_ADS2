@@ -63,7 +63,7 @@ Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:226: 'if' construct must use '{}'s. [NeedBraces]
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:238: Line is longer than 80 characters (found 97). [LineLength]
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:243:48: '+' is not followed by whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:243:57: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:243:56: '+' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:256:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:256:29: Parameter source should be final. [FinalParameters]
 [ERROR] D:\msit\ADS2\6066_ADS2\m12\ADS-2_Exam-2\Solution.java:256:41: Parameter dest should be final. [FinalParameters]
