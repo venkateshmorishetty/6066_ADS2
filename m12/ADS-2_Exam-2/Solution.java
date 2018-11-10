@@ -212,15 +212,6 @@ class EdgeWeightedGraph {
 		return edges;
 	}
 	/**
-	 * { validate or not }
-	 *
-	 * @param      v     { v }
-	 */
-	// private void validateVertex(final int v) {
-	// 	if (v < 0 || v >= V)
-	// 		throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V - 1));
-	// }
-	/**
 	 * Adds an edge.
 	 *
 	 * @param      e     { e }
@@ -239,7 +230,7 @@ class EdgeWeightedGraph {
 	 *
 	 * @return     { edge }
 	 */
-	public Iterable<Edge> adj(int v) {
+	public Iterable<Edge> adj(final int v) {
 		return adj[v];
 	}
 	/**.
@@ -249,7 +240,7 @@ class EdgeWeightedGraph {
 	 *
 	 * @return     { degree }
 	 */
-	public int degree(int v) {
+	public int degree(final int v) {
 		return adj[v].size();
 	}
 	/**.
@@ -294,9 +285,22 @@ class EdgeWeightedGraph {
 		return s.toString();
 	}
 }
-public class Solution {
-
-	public static void main(String[] args) {
+/**.
+ * { solution class }
+ */
+final class Solution {
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() {
+		//constructor.
+	}
+	/**.
+	 * { main function }
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		// Self loops are not allowed...
 		// Parallel Edges are allowed...
 		// Take the Graph input here...
