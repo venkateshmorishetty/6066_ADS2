@@ -18,9 +18,9 @@ class Edge implements Comparable<Edge> {
     /**
      * Constructs the object.
      *
-     * @param      v       { v }
-     * @param      w       { w }
-     * @param      weight  The weight
+     * @param      first       { first }
+     * @param      second       { second }
+     * @param      we  The weight
      */
     Edge(final int first, final int second, final double we) {
         v = first;
@@ -29,7 +29,7 @@ class Edge implements Comparable<Edge> {
     }
     /**.
      * { weight }
-     *
+     * {time complexity is O(1)}
      * @return     { weight }
      */
     public double weight() {
@@ -37,7 +37,7 @@ class Edge implements Comparable<Edge> {
     }
     /**.
      * { either }
-     *
+     * {time complexity is O(1)}
      * @return     { either }
      */
     public int either() {
@@ -45,7 +45,7 @@ class Edge implements Comparable<Edge> {
     }
     /**.
      * { other }
-     *
+     * {time complexity is O(1)}
      * @param      vertex  The vertex
      *
      * @return     { other }
@@ -53,11 +53,9 @@ class Edge implements Comparable<Edge> {
     public int other(final int vertex) {
         if (vertex == v) {
             return w;
-        }
-        else if (vertex == w) {
+        } else if (vertex == w) {
             return v;
-        }
-        else {
+        } else {
             throw new IllegalArgumentException("Illegal endpoint");
         }
     }
@@ -92,7 +90,7 @@ class ShortestPath {
     private IndexMinPQ<Double> pq;
     /**
      * Constructs the object.
-     * {time complexity is O(E+V)}
+     * {time complexity is O(E*log(V))}
      * @param      g     { g }
      * @param      s     { s }
      */
@@ -132,7 +130,7 @@ class ShortestPath {
     }
     /**.
      * { distance to }
-     *
+     * {time complexity is O(1)}
      * @param      v     { v }
      *
      * @return     { distance from source }
@@ -145,7 +143,7 @@ class ShortestPath {
     }
     /**
      * Determines if it has path to.
-     *
+     * {time complexity is O(1)}
      * @param      v     { v }
      *
      * @return     True if has path to, False otherwise.
@@ -155,7 +153,7 @@ class ShortestPath {
     }
     /**.
      * { path }
-     *
+     * {time complexity is O(v)}
      * @param      v     { v }
      *
      * @return     { path }
@@ -196,7 +194,7 @@ class EdgeWeightedGraph {
     /**
      * Constructs the object.
      *
-     * @param      V     { v }
+     * @param      v     { v }
      */
     EdgeWeightedGraph(final int v) {
         this.vertices = v;
@@ -208,7 +206,7 @@ class EdgeWeightedGraph {
     }
     /**.
      * { vertices }
-     *
+     * {time complexity is O(1)}
      * @return     { vertices }
      */
     public int vertices() {
@@ -216,7 +214,7 @@ class EdgeWeightedGraph {
     }
     /**.
      * { edges }
-     *
+     * {time complexity is O(1)}
      * @return     { edges }
      */
     public int countedges() {
@@ -224,7 +222,7 @@ class EdgeWeightedGraph {
     }
     /**
      * Adds an edge.
-     *
+     * {time complexity is O(1)}
      * @param      e     { e }
      */
     public void addEdge(final Edge e) {
@@ -256,7 +254,7 @@ class EdgeWeightedGraph {
     }
     /**.
      * { edges }
-     *
+     * {time complexity is O(E)}
      * @return     { edges }
      */
     public Iterable<Edge> edges() {
@@ -278,7 +276,7 @@ class EdgeWeightedGraph {
     }
     /**.
      * Returns a string representation of the object.
-     *
+     * {time complexity is O(V*E)}
      * @return     String representation of the object.
      */
     public String toString() {
@@ -306,7 +304,10 @@ final class Solution {
     }
     /**.
      * { main function }
-     *
+     * {time complexity is O(V*E)}
+     * {first loop runs E times O(E)}
+     * { to print the graph tostring will take O(V*E)}
+     * 
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
@@ -349,11 +350,6 @@ final class Solution {
             break;
 
         case "ViaPaths":
-            // Handle the case of ViaPaths, where three integers are given.
-            // First is the source and second is the via is the one where path should pass throuh.
-            // third is the destination.
-            // If the path exists print the distance between them.
-            // Other wise print "No Path Found."
             String path = "";
             String[] arr = sc.nextLine().split(" ");
             ShortestPath st1 = new ShortestPath(g, Integer.parseInt(arr[0]));
