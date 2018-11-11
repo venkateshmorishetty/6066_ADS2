@@ -45,7 +45,7 @@ public class SeamCarver {
     }
     /**.
      * { energy function }
-     *
+     * {time complexity is O(1)}
      * @param      x     { row }
      * @param      y     { col }
      *
@@ -81,7 +81,7 @@ public class SeamCarver {
     }
     /**.
      * { finds horizontal stream }
-     *
+     * {time complexity is O(V*E)}
      * @return     { horizontal stream }
      */
     public int[] findHorizontalSeam() {
@@ -100,7 +100,7 @@ public class SeamCarver {
     }
     /**.
      * { finds vertical stream }
-     *
+     * {time complexity is O(V*E)}
      * @return     { vertical stream }
      */
     public int[] findVerticalSeam() {
@@ -143,7 +143,7 @@ public class SeamCarver {
     }
     /**.
      * { relax edge }
-     *
+     * {time complexity is O(1)}
      * @param      i       { row }
      * @param      j       { col }
      * @param      energy  The energy
@@ -170,7 +170,7 @@ public class SeamCarver {
     }
     /**
      * Removes a horizontal seam.
-     *
+     * {time complexity is O(V*E)}
      * @param      seam  The seam
      */
     public void removeHorizontalSeam(final int[] seam) {
@@ -200,7 +200,7 @@ public class SeamCarver {
     }
     /**
      * Removes a vertical seam.
-     *
+     * {time complexity is O(V*E)}
      * @param      verticalseam  The verticalseam
      */
     public void removeVerticalSeam(final int[] verticalseam) {

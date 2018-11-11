@@ -12,7 +12,7 @@ public final class Solution {
     }
     /**
      * Print Energies method.
-     *
+     * {time complexity is O(V*E)}
      * @param      fileName  The file name
      */
     public static void printEnergies(final String fileName) {
@@ -58,7 +58,7 @@ public final class Solution {
     }
     /**
      * main function.
-     *
+     * {time complexity is O(V*E)}
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
