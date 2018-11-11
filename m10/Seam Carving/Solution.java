@@ -30,7 +30,7 @@ public final class Solution {
     }
     /**
      * Print seam method.
-     *
+     *{time complexity is O(V*E)}
      * @param      carver     The carver
      * @param      seam       The seam
      * @param      direction  The direction
@@ -58,7 +58,7 @@ public final class Solution {
     }
     /**
      * main function.
-     * {time complexity is O(V*E)}
+     *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
