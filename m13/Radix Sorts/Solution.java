@@ -6,7 +6,7 @@ import java.util.Arrays;
 class LSD {
     /**.
      * { sort using LSD alg. }
-     *
+     * {time complexity is O(W*N)}
      * @param      a     { array }
      * @param      w     { string len }
      */
@@ -52,7 +52,7 @@ final class Solution {
     }
     /**.
      * { main }
-     *
+     * {time complexity for main O(W*N) +O(N)}
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
