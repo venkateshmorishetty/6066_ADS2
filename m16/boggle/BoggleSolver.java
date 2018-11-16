@@ -40,36 +40,42 @@ public class BoggleSolver {
 		visited[row][col] = true;
 		if (word.length() > 2 && tree.contains(word)) {
 			words.add(word);
-		}		
+		}
+		//top		
 		if (row > 0) {
+			//topleft
 			dfs(row - 1, col, words, word, visited);
-
+			//top
 			if (col > 0) {
 				dfs(row - 1, col-1, words, word, visited);
-
 			}
+			//topright
 			if(col < board.cols() - 1) {
 				dfs(row - 1, col + 1, words, word, visited);
 
 			}
 		}
+		//left
 		if (col > 0) {
 			dfs(row, col - 1, words, word, visited);
-
 		}
+		//right
 		if (col < board.cols() - 1) {
 			dfs(row, col + 1, words, word, visited);
 
 		}
+		//bottom
 		if (row < board.rows() - 1) {
+			//bottom left
 			if (col > 0) {
 				dfs(row+1, col -1, words, word, visited);
 
 			}
+			//bottom right
 			if(col < board.cols() - 1) {
 				dfs(row + 1, col + 1, words, word, visited);
-
 			}
+			//bottom
 			dfs(row + 1, col, words, word, visited);
 		}
 		visited[row][col] = false;
