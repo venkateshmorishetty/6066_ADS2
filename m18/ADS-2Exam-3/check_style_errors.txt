@@ -376,7 +376,7 @@ Audit done.
 Checkstyle ends with 33 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:2:8: Unused import - java.util.ArrayList. [UnusedImports]
+[ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:2: Using the '.*' form of import should be avoided - java.util.*. [AvoidStarImport]
 [ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:4: Missing a Javadoc comment. [JavadocType]
 [ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:4:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
 [ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
@@ -390,7 +390,7 @@ Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:88:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:88:70: Parameter file should be final. [FinalParameters]
 [ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:89: Line is longer than 80 characters (found 92). [LineLength]
-[ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:95:27: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:95:27: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:97:51: '+' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:97:52: '+' is not followed by whitespace. [WhitespaceAround]
 [ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:98:25: '}' at column 4 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
@@ -411,10 +411,10 @@ Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:132:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:132:48: Parameter words should be final. [FinalParameters]
 [ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:132:72: Parameter k should be final. [FinalParameters]
-[ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:134: Line is longer than 80 characters (found 95). [LineLength]
-[ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:151:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:151:36: Parameter t9Signature should be final. [FinalParameters]
-[ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:151:56: Parameter k should be final. [FinalParameters]
+[ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:135: Line is longer than 80 characters (found 91). [LineLength]
+[ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:157:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:157:36: Parameter t9Signature should be final. [FinalParameters]
+[ERROR] D:\msit\ADS2\6066_ADS2\m18\ADS-2Exam-3\Solution.java:157:56: Parameter k should be final. [FinalParameters]
 Audit done.
 Checkstyle ends with 40 errors.
 Starting audit...

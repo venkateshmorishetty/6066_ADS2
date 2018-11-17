@@ -1,5 +1,5 @@
-import java.util.Scanner;
-import java.util.ArrayList;
+// import java.util.Scanner;
+import java.util.*;
 
 public class Solution {
 
@@ -131,19 +131,25 @@ class T9 {
 	// return all possibilities(words), find top k with highest frequency.
 	public Iterable<String> getSuggestions(Iterable<String> words, int k) {
 		// your code goes here
-		BinarySearchST<String, Integer> result = new BinarySearchST<String, Integer>();
-		TST<Integer> temp = new TST<Integer>();
-		Bag<String> bag = new Bag<String>();
+		MaxPQ<Integer> values = new MaxPQ<Integer>();
+		BinarySearchST<String, Integer> st = new BinarySearchST<String, Integer>();
+		ArrayList<String> bag = new ArrayList<String>();
 		for (String i: words) {
 			for (String j: getAllWords(i)) {
-				temp.put(j, tree.get(j));
+				values.insert(tree.get(j));
+				st.put(j, tree.get(j));
 			}
 		}
-		for (String i:words) {
-			result.put(temp.longestPrefixOf(i), temp.get(i));
+		for (int i = 0; i < k; i++) {
+			int high = values.delMax();
+			for (String j: st.keys()) {
+				if (high == st.get(j)) {
+					bag.add(j);
+				}
+			}
 		}
-		System.out.println(result.max());
-		return null;
+		Collections.sort(bag);
+		return bag;
 	}
 
 	// final output
