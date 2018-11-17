@@ -12,8 +12,14 @@ public class BoggleSolver {
             tree.put(dictionary[i], i);
         }
 	}
-
-	// Returns the set of all valid words in the given Boggle board, as an Iterable.
+	/**
+	 * Gets all valid words.
+	 * time complexity is O(N^2*(V+E))
+	 * N = number of rows and cols.
+	 * @param      board  The board
+	 *
+	 * @return     All valid words.
+	 */
 	public Iterable<String> getAllValidWords(BoggleBoard board) {
 		this.board = board;
 		for (int i = 0; i < board.rows(); i++) {
@@ -24,6 +30,15 @@ public class BoggleSolver {
 		}
 		return words;
 	}
+	/**
+	 * { dfs }
+	 * time complexity is O(V+E)
+	 * @param      row      The row
+	 * @param      col      The col
+	 * @param      words    The words
+	 * @param      word     The word
+	 * @param      visited  The visited
+	 */
 	public void dfs(int row, int col, Set words, String word, boolean[][] visited) {
 		if (visited[row][col]) {
 			return;
@@ -80,8 +95,13 @@ public class BoggleSolver {
 		}
 		visited[row][col] = false;
 	}
-	// Returns the score of the given word if it is in the dictionary, zero otherwise.
-	// (You can assume the word contains only the uppercase letters A through Z.)
+	/**
+	 * { score }
+	 * time complexity is O(1)
+	 * @param      word  The word
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public int scoreOf(String word) {
 		// System.out.println(word+" word");
 		if (word.length() == 3 || word.length() == 4) {

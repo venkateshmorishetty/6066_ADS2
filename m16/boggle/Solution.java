@@ -8,7 +8,6 @@ final class Solution {
     private Solution() {
         // empty constructor
     }
-
     /**
      * Main method.
      *
