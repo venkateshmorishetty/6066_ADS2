@@ -157,6 +157,7 @@ fine
 seeking
 
 Your Output: 
+null
 Exception in thread "main" java.lang.NullPointerException
 	at Solution.main(Solution.java:38)
 ----------------------------------------
@@ -224,9 +225,10 @@ paper
 keep
 
 Your Output: 
+null
 Exception in thread "main" java.lang.NullPointerException
-	at T9.getSuggestions(Solution.java:137)
-	at T9.t9(Solution.java:158)
+	at T9.getSuggestions(Solution.java:151)
+	at T9.t9(Solution.java:172)
 	at Solution.main(Solution.java:70)
 ----------------------------------------
 

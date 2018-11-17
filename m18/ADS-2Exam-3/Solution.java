@@ -115,7 +115,7 @@ class T9 {
 			tree.put(i, st.get(i));
 		}
 	}
-
+	
 	// get all the prefixes that match with given prefix.
 	public Iterable<String> getAllWords(String prefix) {
 		// your code goes here
@@ -125,6 +125,20 @@ class T9 {
 
 	public Iterable<String> potentialWords(String t9Signature) {
 		// your code goes here
+		Character[] arr = new Character[26];
+		int temp = 65;
+		for (int i = 0; i < 26; i++) {
+			arr[i] = (char)temp++;
+		}
+		BinarySearchST<Integer, ArrayList<Character>> table = new BinarySearchST<Integer, ArrayList<Character>>();
+		int  k = 0;
+		for (int i =2; i <= 9; i++) {
+			ArrayList<Character> list = new ArrayList<Character>();
+			for (int j = 0; j < 3; j++) {
+				// table.put(i, list.add(arr[k++]));
+			}
+		}
+		System.out.println(table.get(3));
 		return null;
 	}
 
