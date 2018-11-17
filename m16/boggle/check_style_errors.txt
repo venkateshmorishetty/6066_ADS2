@@ -589,15 +589,15 @@ Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:27:79: 'visited' hides a field. [HiddenField]
 [ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:31: Line has trailing spaces. [RegexpSingleline]
 [ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:32:54: '{' is not preceded with whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:37:19: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:37:19: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:44: Line has trailing spaces. [RegexpSingleline]
 [ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:50:49: '-' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:50:50: '-' is not followed by whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:53:27: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:53:27: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:71:40: '+' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:71:41: '+' is not followed by whitespace. [WhitespaceAround]
 [ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:71:49: '-' is not followed by whitespace. [WhitespaceAround]
-[ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:75:27: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:75:27: 'if' is not followed by whitespace. [WhitespaceAfter]
 [ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:83: Line is longer than 80 characters (found 90). [LineLength]
 [ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:84: Line is longer than 80 characters (found 85). [LineLength]
 [ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\BoggleSolver.java:85:9: Class 'BoggleSolver' looks like designed for extension (can be subclassed), but the method 'scoreOf' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'BoggleSolver' final or making the method 'scoreOf' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
@@ -796,14 +796,8 @@ Audit done.
 Checkstyle ends with 33 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\Solution.java:1:8: Unused import - java.util.Arrays. [UnusedImports]
-[ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\Solution.java:6: Class Solution should be declared as final. [FinalClass]
-[ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\Solution.java:8:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\Solution.java:29: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\Solution.java:44:35: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\Solution.java:48: Line is longer than 80 characters (found 84). [LineLength]
 Audit done.
-Checkstyle ends with 7 errors.
+Checkstyle ends with 1 errors.
 Starting audit...
 [ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\StdIn.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] D:\msit\ADS2\6066_ADS2\m16\boggle\StdIn.java:27: Line is longer than 80 characters (found 84). [LineLength]
