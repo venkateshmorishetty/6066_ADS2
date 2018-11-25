@@ -3,11 +3,11 @@ public class CircularSuffixArray {
     private class Node implements Comparable<Node> {
         String str;
         int value;
-        Node(final String s, final int val) {
+        Node(String s,int val) {
             this.str = s;
             this.value = val;
         }
-        public int compareTo(final Node that) {
+        public int compareTo(Node that) {
             int l = str.length();
             for (int i = 0; i < str.length(); i++) {
                 char temp1 = str.charAt((i + this.value) % l);
@@ -29,7 +29,7 @@ public class CircularSuffixArray {
     private int[] indices;
     private int length;
 
-    public CircularSuffixArray(final String s) {
+    public CircularSuffixArray(String s) {
         this.length = s.length();
         this.indices = new int[length];
         Node[] substrings = new Node[length];
@@ -45,7 +45,7 @@ public class CircularSuffixArray {
     public int length() {
         return this.length;
     }
-    public int index(final int i) {
+    public int index(int i) {
         return indices[i];
     }
 }
