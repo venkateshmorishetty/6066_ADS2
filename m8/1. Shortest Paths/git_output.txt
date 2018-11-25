@@ -1,0 +1,6 @@
+[master d31f50e] "ads2_m8_a1_1: 6/6 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 1/1 "
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+ rewrite m8/1. Shortest Paths/result/score.json (76%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/venkateshmorishetty/6066_ADS2.git
+   62312a6..d31f50e  master -> master

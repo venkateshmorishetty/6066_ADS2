@@ -2,9 +2,9 @@ import java.util.*;
 public class BoggleSolver {
 	// Initializes the data structure using the given array of strings as the dictionary.
 	// (You can assume each word in the dictionary contains only the uppercase letters A through Z.)
-	TST<Integer> tree = new TST<Integer>();
+	private TST<Integer> tree = new TST<Integer>();
 	Set<String> words = new HashSet<String>();
-	boolean[][] visited;
+	// boolean[][] visited;
 	String word = "";
 	BoggleBoard board;
 	public BoggleSolver(String[] dictionary) {
@@ -22,9 +22,9 @@ public class BoggleSolver {
 	 */
 	public Iterable<String> getAllValidWords(BoggleBoard board) {
 		this.board = board;
+		boolean[][] visited = new boolean[board.rows()][board.cols()];
 		for (int i = 0; i < board.rows(); i++) {
 			for (int j = 0; j < board.cols(); j++) {
-				visited = new boolean[board.rows()][board.cols()];
 				dfs(i, j, words, word, visited);
 			}
 		}
@@ -39,7 +39,7 @@ public class BoggleSolver {
 	 * @param      word     The word
 	 * @param      visited  The visited
 	 */
-	public void dfs(int row, int col, Set words, String word, boolean[][] visited) {
+	private void dfs(int row, int col, Set words, String word, boolean[][] visited) {
 		if (visited[row][col]) {
 			return;
 		}
@@ -49,13 +49,14 @@ public class BoggleSolver {
 		} else {
 			word += board.getLetter(row, col);
 		}
+		if (word.length() > 2 && tree.contains(word)) {
+			words.add(word);
+		}
 		if(!tree.hasPrefix(word)) {
 			return;
 		}
 		visited[row][col] = true;
-		if (word.length() > 2 && tree.contains(word)) {
-			words.add(word);
-		}
+		
 		//top		
 		if (row > 0) {
 			//topleft

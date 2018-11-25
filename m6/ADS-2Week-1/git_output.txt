@@ -1,0 +1,8 @@
+warning: LF will be replaced by CRLF in m6/ADS-2Week-1/Solution.java.
+The file will have its original line endings in your working directory.
+[master 10a4da6] "ads2_m6_a1_1: 4/12 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 0/1 "
+ 6 files changed, 20 insertions(+), 18 deletions(-)
+ rewrite m6/ADS-2Week-1/result/score.json (86%)
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+To https://github.com/venkateshmorishetty/6066_ADS2.git
+   9f8f2af..10a4da6  master -> master
